@@ -19,7 +19,7 @@ Packages used:
 * fugitive (git wrapper) - <https://github.com/tpope/vim-fugitive>
 * lsp-zero.nvim (LSP wrapper) - <https://github.com/VonHeikemen/lsp-zero.nvim>
   * nvim-lspconfig - <https://github.com/neovim/nvim-lspconfig>
-    * mason.nvim - <https://github.com/williamboman/mason.nvim>
+  * mason.nvim - <https://github.com/williamboman/mason.nvim>
     * mason-lspconfig.nvim - <https://github.com/williamboman/mason-lspconfig.nvim>
     * LuaSnip - <https://github.com/L3MON4D3/LuaSnip>
     * nvim-cmp - <https://github.com/hrsh7th/nvim-cmp>
