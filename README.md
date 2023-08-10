@@ -1,4 +1,5 @@
 # Neovim-config
+
 My current NeoVim config. Nothing more, nothing less.  
 This exists to keep my config safe in case something goes bonkers.  
 
@@ -6,10 +7,12 @@ This config uses Lazy.nvim as its package installer, and a colour scheme similar
 
 Lazy.nvim can be found here: <https://github.com/folke/lazy.nvim>  
 Prerequisites to be installed via your Linux distribution's package manager:
+
 * fd - <https://github.com/sharkdp/fd>  
 * ripgrep - <https://github.com/BurntSushi/ripgrep>
 
 Packages used:  
+
 * vscode.nvim (Colour scheme) - <https://github.com/Mofiqul/vscode.nvim>
 * nvim-treesitter (Language parsing) - <https://github.com/nvim-treesitter/nvim-treesitter>
 * telescope.nvim (Fuzzy Finder) - <https://github.com/nvim-telescope/telescope.nvim>
