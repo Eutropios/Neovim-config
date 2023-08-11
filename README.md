@@ -15,15 +15,24 @@ Packages used:
 
 * vscode.nvim (Colour scheme) - <https://github.com/Mofiqul/vscode.nvim>
 * nvim-treesitter (Language parsing) - <https://github.com/nvim-treesitter/nvim-treesitter>
+  * nvim-treesitter-refactor - <https://github.com/nvim-treesitter/nvim-treesitter-refactor>
+* which-key.nvim (key bindings) - <https://github.com/folke/which-key.nvim>
 * telescope.nvim (Fuzzy Finder) - <https://github.com/nvim-telescope/telescope.nvim>
   * plenary.nvim - <https://github.com/nvim-lua/plenary.nvim>
 * harpoon (File switching) - <https://github.com/ThePrimeagen/harpoon>
-* undotree (Edit tree) - <https://github.com/mbbill/undotree>
+* telescope-undo (Edit tree) - <https://github.com/debugloop/telescope-undo.nvim>
 * fugitive (git wrapper) - <https://github.com/tpope/vim-fugitive>
-* lsp-zero.nvim (LSP wrapper) - <https://github.com/VonHeikemen/lsp-zero.nvim>
-  * nvim-lspconfig - <https://github.com/neovim/nvim-lspconfig>
-  * mason.nvim - <https://github.com/williamboman/mason.nvim>
-    * mason-lspconfig.nvim - <https://github.com/williamboman/mason-lspconfig.nvim>
-    * LuaSnip - <https://github.com/L3MON4D3/LuaSnip>
-    * nvim-cmp - <https://github.com/hrsh7th/nvim-cmp>
-    * cmp-nvim-lsp - <https://github.com/hrsh7th/cmp-nvim-lsp>
+* nvim-lspconfig - <https://github.com/neovim/nvim-lspconfig>
+* mason.nvim - <https://github.com/williamboman/mason.nvim>
+  * mason-lspconfig.nvim - <https://github.com/williamboman/mason-lspconfig.nvim>
+  * LuaSnip - <https://github.com/L3MON4D3/LuaSnip>
+    * friendly-snippets - <https://github.com/rafamadriz/friendly-snippets>
+  * nvim-cmp - <https://github.com/hrsh7th/nvim-cmp>
+  * cmp-nvim-lsp - <https://github.com/hrsh7th/cmp-nvim-lsp>
+  * cmp-buffer - <https://github.com/hrsh7th/cmp-buffer>
+  * cmp-cmdline - <https://github.com/hrsh7th/cmp-cmdline>
+
+
+## Acknowledgement
+
+This configuration is inspired by <https://github.com/ThePrimeagen/.dotfiles/tree/master/vim-2022/.config/nvim> and <https://github.com/NavePnow/dotfiles/tree/main/.config/nvim>
