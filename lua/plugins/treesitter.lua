@@ -1,6 +1,5 @@
 local M = {
     "nvim-treesitter/nvim-treesitter",
-    lazy = false,
     build = ":TSUpdate",
     event = "BufReadPost",
     dependencies = {
@@ -22,18 +21,18 @@ local M = {
         autotag = { enable = true },
         indent = { enable = true },
         ensure_installed = {
-                "c", "lua", "vim", "vimdoc", "query", "python", "cpp", "html",
-                "css", "bash", "cmake", "javascript", "typescript", "make", "rust",
-                "yaml", "toml", "json", "scss", "go", "diff", "rst", "gitcommit",
-                "latex", "bibtex"
-            },
+            "c", "lua", "vim", "vimdoc", "query", "python", "cpp", "html",
+            "css", "bash", "cmake", "javascript", "typescript", "make", "rust",
+            "yaml", "toml", "json", "scss", "go", "diff", "rst", "gitcommit",
+            "latex", "bibtex", "markdown", "markdown_inline", "ini", "regex"
+        },
         sync_install = false,
-        ignore_install = {}, -- List of parsers to ignore installation
+        ignore_install = {},  -- List of parsers to ignore installation
         refactor = {
             highlight_definitions = {
                 enable = true,
                 -- Set to false if you have an `updatetime` of ~100.
-                clear_on_cursor_move = false,
+                clear_on_cursor_move = true,
             },
             highlight_current_scope = { enable = false },
         },

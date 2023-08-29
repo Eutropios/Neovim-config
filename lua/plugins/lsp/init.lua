@@ -23,7 +23,28 @@ return {
                         on_attach = lsp_utils.on_attach,
                         capabilities = lsp_utils.capabilities,
                     })
-                end
+                end,
+                ["pyright"] = function()
+                    lspconfig.pyright.setup({
+                        on_attach = lsp_utils.on_attach,
+                        capabilities = lsp_utils.capabilities,
+                        settings = {
+                            python = {
+                                analysis = {
+                                    typeCheckingMode = "on",
+                                },
+                            },
+                        },
+                    })
+                end,
+                ["clangd"] = function()
+                    local capabilities_cpp = lsp_utils.capabilities
+                    capabilities_cpp.offsetEncoding = { "uts-16" }
+                    lspconfig.clangd.setup({
+                        on_attach = lsp_utils.on_attach,
+                        capabilities = capabilities_cpp,
+                    })
+                end,
             })
         end,
     },

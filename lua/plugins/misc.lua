@@ -1,10 +1,20 @@
-local M = {
-    {
-        'nvim-lua/plenary.nvim'
-    },
-    {
-        'tpope/vim-fugitive'
-    }
-}
+return {
+    { "nvim-lua/plenary.nvim" },
+    { "MunifTanjim/nui.nvim" },
+    { "nvim-tree/nvim-web-devicons", opts = { default = true } },
 
-return M
+    -- Utilities
+    -- {
+    -- 	"folke/persistence.nvim",
+    -- 	lazy = false,
+    -- 	keys = {
+    -- 		{
+    -- 			"<leader>ls",
+    -- 			function()
+    -- 				require("persistence").load()
+    -- 			end,
+    -- 		},
+    -- 	},
+    -- 	opts = { options = { "buffers", "curdir", "folds", "help", "tabpages", "terminal", "globals" } },
+    -- },
+}

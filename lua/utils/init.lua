@@ -46,17 +46,43 @@ M.lsp_kinds = {
 }
 
 M.mason_packages = {
+    "bash-language-server",
+    "black",
+    "clang-format",
+    "clangd",
+    "cspell",
+    "css-lsp",
+    "html-lsp",
+    "json-lsp",
+    "lua-language-server",
+    "markdownlint",
+    "pyright",
+    "shfmt",
+    "taplo",
+    "typescript-language-server",
+    "yaml-language-server",
+    "ruff",
     "gitlint",
     "editorconfig-checker",
-    "black",
-    "yamlfmt"
+    "yamlfmt",
+    "stylua",
+    "yamllint"
 }
 
 M.lsp_servers = {
-    "pyre",
-    "ruff_lsp",
+    "clangd",
+    "tsserver",
+    "pyright",
     "lua_ls",
+    "rome",
+    "ruff_lsp",
+    "bashls",
+    "yamlls",
+    "jsonls",
+    "cssls",
     "taplo",
+    "html",
+    "tsserver"
 }
 
 function M.on_attach(on_attach)
