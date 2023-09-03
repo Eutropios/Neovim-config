@@ -24,10 +24,12 @@ local M = {
             "c", "lua", "vim", "vimdoc", "query", "python", "cpp", "html",
             "css", "bash", "cmake", "javascript", "typescript", "make", "rust",
             "yaml", "toml", "json", "scss", "go", "diff", "rst", "gitcommit",
-            "latex", "bibtex", "markdown", "markdown_inline", "ini", "regex"
+            "latex", "bibtex", "markdown", "markdown_inline", "ini", "regex",
+            "git_config", "git_rebase", "gitattributes", "gitignore", "luap",
+            "luadoc", "awk", "csv", "requirements", "pymanifest"
         },
         sync_install = false,
-        ignore_install = {},  -- List of parsers to ignore installation
+        ignore_install = {}, -- List of parsers to ignore installation
         refactor = {
             highlight_definitions = {
                 enable = true,

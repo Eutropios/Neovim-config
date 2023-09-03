@@ -83,7 +83,6 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
-vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
@@ -119,7 +118,7 @@ wk.register({
             o = { "<cmd>lua require('trouble').open()<cr>", "open" },
             w = { "<cmd>lua require('trouble').open('workspace_diagnostics')<cr>", "workspace diagnostics" },
             d = { "<cmd>lua require('trouble').open('document_diagnostics')<cr>", "document diagnostics" },
-            q = { "<cmd>lua require('trouble').open('quickfix')<cr>", "quickfix"},
+            q = { "<cmd>lua require('trouble').open('quickfix')<cr>", "quickfix" },
             l = { "<cmd>lua require('trouble').open('loclist')<cr>", "loclist" },
             r = { "<cmd>lua require('trouble').open('lsp_references')<cr>", "lsp references" },
         }

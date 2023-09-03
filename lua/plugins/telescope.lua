@@ -1,12 +1,9 @@
 local M = {
-	"nvim-telescope/telescope.nvim",
-	event = "BufReadPre",
-	dependencies = {
-		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
-		{ "nvim-telescope/telescope-ui-select.nvim" },
+    "nvim-telescope/telescope.nvim",
+    dependencies = {
         "nvim-lua/plenary.nvim",
         "debugloop/telescope-undo.nvim"
-	},
+    },
     keys = {
         {
             "<leader>pf",
@@ -15,11 +12,13 @@ local M = {
         },
         {
             "<C-p>",
-            "<cmd>lua require('telescope.builtin').git_files()<cr>"
+            "<cmd>lua require('telescope.builtin').git_files()<cr>",
+            desc = "Git files"
         },
         {
             "<C-g>",
-            "<cmd>lua require('telescope.builtin').live_grep()<cr>"
+            "<cmd>lua require('telescope.builtin').live_grep()<cr>",
+            desc = "Grep files"
         },
         {
             "<leader>ps",
@@ -31,67 +30,41 @@ local M = {
             "<cmd>Telescope undo<cr>",
             desc = "Undo history",
         },
-		{
-			"<C-M-p>",
-			"<cmd>lua require('telescope.builtin').builtin(require('telescope.themes').get_dropdown({}))<cr>",
-		},
-		{
-            "<C-f>",
-            "<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>"
-        },
-	},
-	opts = function()
-		local actions = require("telescope.actions")
-		local theme = require("telescope.themes")
+    },
+    config = function()
+        local ts = require("telescope")
         local tsu = require("telescope-undo.actions")
-		return {
-			pickers = {
-				find_files = { hidden = true },
-				live_grep = {
-					additional_args = function(opts)
-						return { "--hidden" }
-					end,
-				},
-			},
-			defaults = {
-				mappings = {
-                    i = { ["<esc>"] = actions.close },
-                    ["<C-a>"] = tsu.yank_additions,
-                    ["<C-d>"] = tsu.yank_deletions,
-                    ["<C-r>"] = tsu.restore
+        ts.setup({
+            defaults = {
+                file_ignore_patterns = {
+                    ".git",
+                }
+            },
+            pickers = {
+                find_files = { hidden = true },
+                live_grep = {
+                    additional_args = function(opts)
+                        return { "--hidden" }
+                    end,
                 },
-			},
-
-			extensions = {
-				fzf = {
-					fuzzy = true, -- false will only do exact matching
-					override_generic_sorter = true, -- override the generic sorter
-					override_file_sorter = true, -- override the file sorter
-					case_mode = "smart_case", -- or "ignore_case" or "respect_case"
-                    -- the default case_mode is "smart_case"
-                },
-                ["ui-select"] = {
-                    theme.get_dropdown({
-                        -- even more opts
-                    }),
-                },
+            },
+            extensions = {
                 undo = {
                     use_delta = true,
                     side_by_side = true,
                     layout_strategy = "horizontal",
                     layout_config = {
                         preview_height = 0.8,
-                    }, 
+                    },
+                    mappings = {
+                        ["<C-a>"] = tsu.yank_additions,
+                        ["<C-d>"] = tsu.yank_deletions,
+                        ["<C-r>"] = tsu.restore
+                    },
                 },
             },
-        }
-    end,
-    config = function(_, opts)
-        local telescope = require("telescope")
-        telescope.setup(opts)
-        telescope.load_extension("fzf")
-        telescope.load_extension("ui-select")
-        telescope.load_extension("undo")
+        })
+        ts.load_extension("undo")
     end,
 }
 

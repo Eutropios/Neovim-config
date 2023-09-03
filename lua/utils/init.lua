@@ -66,15 +66,16 @@ M.mason_packages = {
     "editorconfig-checker",
     "yamlfmt",
     "stylua",
-    "yamllint"
+    "yamllint",
+    "biome"
 }
 
 M.lsp_servers = {
     "clangd",
+    "esbonio",
     "tsserver",
     "pyright",
     "lua_ls",
-    "rome",
     "ruff_lsp",
     "bashls",
     "yamlls",
@@ -82,7 +83,7 @@ M.lsp_servers = {
     "cssls",
     "taplo",
     "html",
-    "tsserver"
+    "tsserver",
 }
 
 function M.on_attach(on_attach)

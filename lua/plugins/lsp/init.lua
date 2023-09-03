@@ -39,7 +39,7 @@ return {
                 end,
                 ["clangd"] = function()
                     local capabilities_cpp = lsp_utils.capabilities
-                    capabilities_cpp.offsetEncoding = { "uts-16" }
+                    capabilities_cpp.offsetEncoding = { "utf-16" }
                     lspconfig.clangd.setup({
                         on_attach = lsp_utils.on_attach,
                         capabilities = capabilities_cpp,
