@@ -61,13 +61,14 @@ M.mason_packages = {
     "taplo",
     "typescript-language-server",
     "yaml-language-server",
-    "ruff",
+    "debugpy",
     "gitlint",
     "editorconfig-checker",
     "yamlfmt",
     "stylua",
     "yamllint",
-    "biome"
+    "biome",
+    "shellcheck"
 }
 
 M.lsp_servers = {
@@ -84,6 +85,7 @@ M.lsp_servers = {
     "taplo",
     "html",
     "tsserver",
+    "marksman"
 }
 
 function M.on_attach(on_attach)

@@ -50,9 +50,6 @@ vim.keymap.set({ "i", "v", "n" }, "<C-M-q>", "<cmd>qa!<cr>", { desc = "Exit Vim"
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
--- Clear search results
-vim.keymap.set("n", "<leader>f", "za")
-
 -- toggle options
 vim.keymap.set("n", "<leader>tw", function()
     utils.toggle("wrap")
@@ -66,11 +63,6 @@ end, { desc = "Toggle Line Numbers" })
 vim.keymap.set("n", "<leader>td", utils.toggle_diagnostics, { desc = "Toggle Diagnostics" })
 vim.keymap.set("n", "<leader>q", utils.toggle_quickfix, { desc = "Toggle Quickfix Window" })
 
-vim.keymap.set("n", "<C-M-f>", function()
-    vim.lsp.buf.format({ async = false })
-    vim.api.nvim_command("write")
-end, { desc = "Lsp formatting" })
-
 -- stuff from old config
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
@@ -78,12 +70,13 @@ vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 vim.keymap.set("n", "J", "mzJ`z")
-vim.keymap.set("n", "<C-d>", "<C-d>zz")
-vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
-vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
+vim.keymap.set("n", "<leader>f", function()
+    vim.lsp.buf.format({ async = false })
+    vim.api.nvim_command("write")
+end, { desc = "Lsp formatting" })
 
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
@@ -94,16 +87,16 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
-end)
+end, { desc = "shoutout/source" })
 
-vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
+vim.keymap.set("n", "<leader>gs", vim.cmd.Git, { desc = "Git" })
 
 -- which-key stuff
 local wk = require("which-key")
 wk.register({
     ["<leader>"] = {
         h = {
-            name = "harpoon",
+            name = "Harpoon",
             a = { "<cmd>lua require('harpoon.mark').add_file()<cr>", "add file" },
             r = { "<cmd>lua require('harpoon.mark').rm_file()<cr>", "remove file" },
             m = { "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", "harpoon menu" },
@@ -121,7 +114,16 @@ wk.register({
             q = { "<cmd>lua require('trouble').open('quickfix')<cr>", "quickfix" },
             l = { "<cmd>lua require('trouble').open('loclist')<cr>", "loclist" },
             r = { "<cmd>lua require('trouble').open('lsp_references')<cr>", "lsp references" },
-        }
+        },
+        p = {
+            name = "Telescope",
+            f = { "<cmd>lua require('telescope.builtin').find_files()<cr>", "Open fuzzy finder" },
+            s = {
+                "<cmd>lua require('telescope.builtin').grep_string({ search = vim.fn.input('Grep > ')})<cr>",
+                "Grep in buffer"
+            },
+            p = { "<cmd>lua require('telescope.builtin').git_files()<cr>", "Git files" },
+            g = { "<cmd>lua require('telescope.builtin').live_grep()<cr>", "Live grep" },
+        },
     },
-
 })

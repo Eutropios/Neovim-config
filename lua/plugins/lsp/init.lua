@@ -62,6 +62,7 @@ return {
                     package_pending = "➜",
                     package_uninstalled = "✗",
                 },
+                width = 0.95
             },
         },
         config = function(_, opts)
