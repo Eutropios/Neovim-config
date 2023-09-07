@@ -2,7 +2,10 @@ local M = {
     "akinsho/bufferline.nvim",
     event = "VeryLazy",
     keys = {
-        { "<leader>pl", "<cmd>BufferLineTogglePin<cr>" },
+        {
+            "<leader>pl",
+            "<cmd>BufferLineTogglePin<cr>",
+        },
     },
     opts = {
         options = {
@@ -15,9 +18,9 @@ local M = {
         },
         highlights = {
             buffer_visible = {
-                fg = "#d4d4d4"
+                fg = "#d4d4d4",
             },
-        }
+        },
     },
 }
 

@@ -14,6 +14,7 @@ local M = {
                 formatting.clang_format,
                 formatting.taplo,
                 formatting.black,
+                formatting.stylua,
                 diagnostics.shellcheck,
                 diagnostics.trail_space,
                 diagnostics.ruff,
