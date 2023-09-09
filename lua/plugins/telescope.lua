@@ -3,6 +3,7 @@ local M = {
     dependencies = {
         "nvim-lua/plenary.nvim",
     },
+    event = "VeryLazy",
     config = function()
         local ts = require("telescope")
         ts.setup({

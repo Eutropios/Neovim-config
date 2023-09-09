@@ -64,7 +64,7 @@ vim.keymap.set("n", "<leader>td", utils.toggle_diagnostics, { desc = "Toggle Dia
 vim.keymap.set("n", "<leader>q", utils.toggle_quickfix, { desc = "Toggle Quickfix Window" })
 
 -- stuff from old config
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, { desc = "Return to Netrw" })
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -125,5 +125,8 @@ wk.register({
             p = { "<cmd>lua require('telescope.builtin').git_files()<cr>", "Git files" },
             g = { "<cmd>lua require('telescope.builtin').live_grep()<cr>", "Live grep" },
         },
+        l = { "<cmd>Lazy<cr>", "Open Lazy" },
+        v = { name = "LSP and Mason" },
+        w = { name = "Workspace" }
     },
 })

@@ -8,7 +8,7 @@ local M = {
                 return vim.api.nvim_win_get_config(win).focusable
             end, vim.api.nvim_tabpage_list_wins(0))
             leap.leap({ target_windows = focusable_windows_on_tabpage })
-        end)
+        end, { desc = "Leap prefix" })
     end,
 }
 

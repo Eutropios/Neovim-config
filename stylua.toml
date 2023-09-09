@@ -1,0 +1,11 @@
+column_width = 80
+line-endings = "Unix"
+indent_type = "Tabs"
+indent_width = 4
+quote_style = "AutoPreferDouble"
+call_parentheses = "Always"
+collapse_simple_statements = "Never"
+
+[sort_requires]
+    enabled = true
+

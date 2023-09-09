@@ -51,6 +51,13 @@ return {
     {
         "williamboman/mason.nvim",
         build = ":MasonUpdate",
+        keys = {
+            {
+                "<leader>vm",
+                "<cmd>Mason<cr>",
+                desc = "Open Mason"
+            }
+        },
         opts = {
             pip = {
                 upgrade_pip = true,
@@ -62,7 +69,8 @@ return {
                     package_pending = "➜",
                     package_uninstalled = "✗",
                 },
-                width = 0.95
+                width = 0.95,
+                height = 0.90
             },
         },
         config = function(_, opts)

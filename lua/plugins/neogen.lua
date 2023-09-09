@@ -6,6 +6,7 @@ local M = {
             function()
                 require("neogen").generate({})
             end,
+            desc = "Generate Annotations"
         },
     },
     opts = {

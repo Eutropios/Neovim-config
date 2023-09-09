@@ -14,7 +14,10 @@ local M = {
                 formatting.clang_format,
                 formatting.taplo,
                 formatting.black,
-                formatting.stylua,
+                formatting.stylua.with({
+                    filetypes = { "lua", "luau", "luadoc" },
+                    extra_args = { "--config-file=../../stylua.toml" }
+                }),
                 diagnostics.shellcheck,
                 diagnostics.trail_space,
                 diagnostics.ruff,

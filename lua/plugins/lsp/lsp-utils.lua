@@ -34,20 +34,22 @@ M.setup = function()
     -- See `:help vim.lsp.*` for documentation on any of the below functions
     local bufopts = { noremap = true, silent = true }
 
-    vim.keymap.set("n", "<leader>gD", vim.lsp.buf.declaration, bufopts)
-    vim.keymap.set("n", "<leader>gd", "<cmd>Telescope lsp_definitions<cr>", bufopts)
-    vim.keymap.set("n", "<leader>gr", "<cmd>Telescope lsp_references<cr>", bufopts)
-    vim.keymap.set("n", "<leader>gi", "<cmd>Telescope lsp_implementations<cr>", bufopts)
-    vim.keymap.set("n", "<leader>gt", "<cmd>Telescope lsp_type_definitions<cr>", bufopts)
-    vim.keymap.set("n", "<leader>K", vim.lsp.buf.hover, bufopts)
-    vim.keymap.set("n", "<leader>k", vim.lsp.buf.signature_help, bufopts)
-    vim.keymap.set("n", "<leader>wa", vim.lsp.buf.add_workspace_folder, bufopts)
-    vim.keymap.set("n", "<leader>wr", vim.lsp.buf.remove_workspace_folder, bufopts)
+    vim.keymap.set("n", "<leader>vd", vim.lsp.buf.declaration, bufopts, { desc = "View Declaration" })
+    vim.keymap.set("n", "<leader>vf", "<cmd>Telescope lsp_definitions<cr>", bufopts, { desc = "View Def" })
+    vim.keymap.set("n", "<leader>vr", "<cmd>Telescope lsp_references<cr>", bufopts, { desc = "View References" })
+    vim.keymap.set("n", "<leader>vi", "<cmd>Telescope lsp_implementations<cr>", bufopts,
+        { desc = "View Implementations" })
+    vim.keymap.set("n", "<leader>vt", "<cmd>Telescope lsp_type_definitions<cr>", bufopts, { desc = "View Type Defs" })
+    vim.keymap.set("n", "<leader>vh", vim.lsp.buf.hover, bufopts, { desc = "LSP Hover" })
+    vim.keymap.set("n", "<leader>vs", vim.lsp.buf.signature_help, bufopts, { desc = "Signature Help" })
+    vim.keymap.set("n", "<leader>wa", vim.lsp.buf.add_workspace_folder, bufopts, { desc = "Add Workspace Folder" })
+    vim.keymap.set("n", "<leader>wr", vim.lsp.buf.remove_workspace_folder, bufopts, { desc = "rm Workspace Folder" })
     vim.keymap.set("n", "<leader>wl", function()
         print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
-    end, bufopts)
-    vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, bufopts)
-    vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, bufopts)
+    end, bufopts, { desc = "ls Workspace Folders" })
+    vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, bufopts, { desc = "Rename" })
+    vim.keymap.set("n", "<leader>va", vim.lsp.buf.code_action, bufopts, { desc = "Code Action" })
+
     -- show diagnostics in hover window
     vim.api.nvim_create_autocmd("CursorHold", {
         callback = function()
