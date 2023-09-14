@@ -13,7 +13,10 @@ local M = {
                 formatting.shfmt,
                 formatting.clang_format,
                 formatting.taplo,
-                formatting.black,
+                formatting.black.with({
+                    filetypes = { "python" },
+                    extra_args = { "--config=pyproject.toml" }
+                }),
                 formatting.stylua.with({
                     filetypes = { "lua", "luau", "luadoc" },
                     extra_args = { "--config-file=../../stylua.toml" }

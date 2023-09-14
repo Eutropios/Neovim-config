@@ -26,7 +26,7 @@ local M = {
             "yaml", "toml", "json", "scss", "go", "diff", "rst", "gitcommit",
             "latex", "bibtex", "markdown", "markdown_inline", "ini", "regex",
             "git_config", "git_rebase", "gitattributes", "gitignore", "luap",
-            "luadoc", "awk", "csv", "requirements", "pymanifest"
+            "luadoc", "awk", "csv", "requirements", "pymanifest", "xml"
         },
         sync_install = false,
         ignore_install = {}, -- List of parsers to ignore installation

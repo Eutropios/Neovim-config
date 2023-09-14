@@ -1,6 +1,5 @@
 local M = {
     "ellisonleao/glow.nvim",
-    event = "VeryLazy",
     keys = {
         {
             "<leader>mp",

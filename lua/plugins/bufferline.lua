@@ -1,5 +1,6 @@
 local M = {
     "akinsho/bufferline.nvim",
+    lazy = false,
     event = "VeryLazy",
     keys = {
         {
@@ -15,6 +16,7 @@ local M = {
                 delay = 0,
                 reveal = { "close" },
             },
+            separator_style = "slant"
         },
         highlights = {
             buffer_visible = {

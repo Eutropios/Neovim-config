@@ -1,6 +1,6 @@
 local M = {
     "nvim-lualine/lualine.nvim",
-    event = "VeryLazy",
+    lazy = false,
     opts = function()
         local function diff_source()
             local gitsigns = vim.b.gitsigns_status_dict
