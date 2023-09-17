@@ -10,10 +10,10 @@ vim.opt.undofile = true
 vim.opt.pumheight = 10 -- pop up menu height
 vim.opt.swapfile = false
 vim.opt.ignorecase = true
-vim.opt.smartcase = true   -- smart case
+vim.opt.smartcase = true -- smart case
 vim.opt.smartindent = true -- smart indent
-vim.opt.showmode = false   -- we don't need to see things like -- INSERT -- anymore
-vim.opt.sidescrolloff = 5  -- how many lines to scroll when using the scrollbar
+vim.opt.showmode = false -- we don't need to see things like -- INSERT -- anymore
+vim.opt.sidescrolloff = 5 -- how many lines to scroll when using the scrollbar
 vim.opt.autoindent = true
 vim.opt.signcolumn = "yes"
 vim.opt.sessionoptions = "buffers,curdir,folds,help,tabpages,terminal,globals"
@@ -39,15 +39,16 @@ vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.opt.foldenable = true
 vim.opt.fillchars = {
-    foldopen = "",
-    foldclose = "",
-    fold = " ",
-    foldsep = " ",
-    diff = "/",
-    eob = " ",
+	foldopen = "",
+	foldclose = "",
+	fold = " ",
+	foldsep = " ",
+	diff = "/",
+	eob = " ",
 }
 vim.opt.mousemoveevent = true
 
 -- command completion
 vim.opt.wildmode = "longest:full:full"
-vim.opt.wildignore = "*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx,*DS_STORE,*.db"
+vim.opt.wildignore =
+	"*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx,*DS_STORE,*.db"
