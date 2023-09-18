@@ -22,9 +22,14 @@ vim.api.nvim_create_autocmd("FileType", {
 	callback = function(args)
 		local ft = vim.bo[args.buf].filetype
 		if ft == "yaml" then
-			require("spacing/two")
+			vim.opt.shiftwidth = 2
+			vim.opt.tabstop = 2
 		elseif ft == "rst" then
-			require("spacing/three")
+			vim.opt.shiftwidth = 3
+			vim.opt.tabstop = 3
+		else
+			vim.opt.shiftwidth = 4
+			vim.opt.tabstop = 4
 		end
 	end,
 })
