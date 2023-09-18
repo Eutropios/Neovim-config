@@ -93,7 +93,7 @@ M.setup = function()
 	end, vim.tbl_extend("error", bufopts, { desc = "ls Workspace Folders" }))
 	vim.keymap.set(
 		"n",
-		"<leader>rn",
+		"<leader>wn",
 		vim.lsp.buf.rename,
 		vim.tbl_extend("error", bufopts, { desc = "Rename" })
 	)

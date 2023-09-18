@@ -12,22 +12,22 @@ local M = {
 		{
 			"<leader>pf",
 			"<cmd>lua require('telescope.builtin').find_files()<cr>",
-			"Open fuzzy finder",
+			desc = "Open fuzzy finder",
 		},
 		{
 			"<leader>ps",
 			"<cmd>lua require('telescope.builtin').grep_string({ search = vim.fn.input('Grep > ')})<cr>",
-			"Grep in buffer",
+			desc = "Grep in buffer",
 		},
 		{
 			"<leader>pp",
 			"<cmd>lua require('telescope.builtin').git_files()<cr>",
-			"Git files",
+			desc = "Git files",
 		},
 		{
 			"<leader>pg",
 			"<cmd>lua require('telescope.builtin').live_grep()<cr>",
-			"Live grep",
+			desc = "Live grep",
 		},
 	},
 	event = "VeryLazy",

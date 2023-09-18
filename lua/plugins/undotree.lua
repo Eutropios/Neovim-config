@@ -1,14 +1,13 @@
 local M = {
-	event = "BufReadPost",
+	event = "BufReadPre",
 	"mbbill/undotree",
-	config = function()
-		vim.keymap.set(
-			"n",
+	keys = {
+		{
 			"<leader>u",
-			vim.cmd.UndotreeToggle,
-			{ desc = "Undotree" }
-		)
-	end,
+			"<cmd>UndotreeToggle<cr>",
+			desc = "UndotreeToggle",
+		},
+	},
 }
 
 return M

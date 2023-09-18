@@ -8,36 +8,35 @@ local M = {
 		-- refer to the configuration section below
 	},
 	keys = {
-		name = "Trouble",
 		{
 			"<leader>to",
 			"<cmd>lua require('trouble').open()<cr>",
-			"open",
+			desc = "open",
 		},
 		{
 			"<leader>tw",
 			"<cmd>lua require('trouble').open('workspace_diagnostics')<cr>",
-			"workspace diagnostics",
+			desc = "workspace diagnostics",
 		},
 		{
 			"<leader>td",
 			"<cmd>lua require('trouble').open('document_diagnostics')<cr>",
-			"document diagnostics",
+			desc = "document diagnostics",
 		},
 		{
 			"<leader>tq",
 			"<cmd>lua require('trouble').open('quickfix')<cr>",
-			"quickfix",
+			desc = "quickfix",
 		},
 		{
 			"<leader>tl",
 			"<cmd>lua require('trouble').open('loclist')<cr>",
-			"loclist",
+			desc = "loclist",
 		},
 		{
 			"<leader>tr",
 			"<cmd>lua require('trouble').open('lsp_references')<cr>",
-			"lsp references",
+			desc = "lsp references",
 		},
 	},
 }

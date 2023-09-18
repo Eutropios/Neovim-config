@@ -147,5 +147,8 @@ wk.register({
 		l = { "<cmd>Lazy<cr>", "Open Lazy" },
 		v = { name = "LSP and Mason" },
 		w = { name = "Workspace" },
+		h = { name = "Harpoon" },
+		t = { name = "Trouble" },
+		p = { name = "Telescope" },
 	},
 })

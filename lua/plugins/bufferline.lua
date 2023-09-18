@@ -5,6 +5,7 @@ local M = {
 		{
 			"<leader>pl",
 			"<cmd>BufferLineTogglePin<cr>",
+			desc = "Pin Buffer",
 		},
 	},
 	opts = {
