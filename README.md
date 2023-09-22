@@ -21,17 +21,19 @@ Prerequisites to be installed via your Linux distribution's package manager:
 * nvim-lspconfig - <https://github.com/neovim/nvim-lspconfig>
 * mason.nvim - <https://github.com/williamboman/mason.nvim>
     * mason-lspconfig.nvim - <https://github.com/williamboman/mason-lspconfig.nvim>
-* null-ls (This might need a replacement) - <https://github.com/jose-elias-alvarez/null-ls.nvim>
+* lsp_signature.nvim - <https://github.com/ray-x/lsp_signature.nvim>
+* conform.nvim - <https://github.com/stevearc/conform.nvim>
+* nvim-lint - <https://github.com/mfussenegger/nvim-lint>
 * nvim-cmp - <https://github.com/hrsh7th/nvim-cmp>
     * cmp-nvim-lsp - <https://github.com/hrsh7th/cmp-nvim-lsp>
     * cmp-buffer - <https://github.com/hrsh7th/cmp-buffer>
     * cmp-cmdline - <https://github.com/hrsh7th/cmp-cmdline>
     * cmp-path - <https://github.com/hrsh7th/cmp-path>
+    * cmp_luasnip - <https://github.com/saadparwaiz1/cmp_luasnip>
 
 ### GUI
 
 * gitsigns.nvim - <https://github.com/lewis6991/gitsigns.nvim>
-* nvim-tree.lua - <https://github.com/nvim-tree/nvim-tree.lua>
 * nvim-web-devicons - <https://github.com/nvim-tree/nvim-web-devicons>
 * statuscol.nvim - <https://github.com/luukvbaal/statuscol.nvim>
 * bufferline.nvim - <https://github.com/akinsho/bufferline.nvim>
@@ -43,6 +45,7 @@ Prerequisites to be installed via your Linux distribution's package manager:
 * which-key.nvim (Key Bindings) - <https://github.com/folkr/which-key.nvim>
 * telescope.nvim (Fuzzy Finder) - <https://github.com/nvim-telescope/telescope.nvim>
     * plenary.nvim - <https://github.com/nvim-lua/plenary.nvim>
+    * telescope-fzf-native.nvim - <https://github.com/nvim-telescope/telescope-fzf-native.nvim>
 * leap.nvim (File Motions) - <https://github.com/ggandor/leap.nvim>
 * harpoon (File Jumping) - <https://github.com/ThePrimeagen/harpoon>
 * LuaSnip (Code Snippets) - <https://github.com/L3MON4D3/LuaSnip>
@@ -54,7 +57,8 @@ Prerequisites to be installed via your Linux distribution's package manager:
 * neogen (Generate Annotations) - <https://github.com/danymat/neogen>
 * trouble.nvim (Diagnostics Panel) - <https://github.com/folke/trouble.nvim>
 * nvim-autopairs (Auto-closing braces) - <https://github.com/windwp/nvim-autopairs>
-
+* vim-illuminate (Illuminate Occurences) - <https://github.com/RRethy/vim-illuminate>
+* glow.nvim - <https://github.com/ellisonleao/glow.nvim>
 
 ## Acknowledgement
 

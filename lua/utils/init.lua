@@ -53,7 +53,9 @@ M.lsp_kinds = {
 M.mason_packages = {
 	"awk-language-server",
 	"bash-language-server",
+	"clang-format",
 	"clangd",
+	"cmakelang",
 	"css-lsp",
 	"esbonio",
 	"gopls",
@@ -61,8 +63,10 @@ M.mason_packages = {
 	"json-lsp",
 	"lemminx",
 	"lua-language-server",
+	"markdownlint",
 	"marksman",
 	"neocmakelsp",
+	"prettier",
 	"pyright",
 	"ruff-lsp",
 	"rust-analyzer",
@@ -75,10 +79,6 @@ M.mason_packages = {
 	"stylelint",
 	"shfmt",
 	"yamlfmt",
-	"clang-format",
-	"cmakelang",
-	"prettier",
-	"markdownlint",
 }
 
 M.lsp_servers = {
