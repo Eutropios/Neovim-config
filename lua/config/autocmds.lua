@@ -30,6 +30,16 @@ vim.api.nvim_create_autocmd("FileType", {
 		else
 			vim.opt.shiftwidth = 4
 			vim.opt.tabstop = 4
+			if ft == "markdown" then
+				vim.opt_local.wrap = true
+				vim.opt_local.spell = false
+			end
 		end
+	end,
+})
+
+vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+	callback = function()
+		require("lint").try_lint()
 	end,
 })

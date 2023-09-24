@@ -48,7 +48,6 @@ local M = {
 			"latex",
 			"bibtex",
 			"markdown",
-			"markdown_inline",
 			"ini",
 			"regex",
 			"git_config",
