@@ -1,6 +1,6 @@
 local M = {
 	"akinsho/bufferline.nvim",
-	event = "BufReadPre",
+	lazy = false,
 	keys = {
 		{
 			"<leader>pl",

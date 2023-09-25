@@ -128,7 +128,6 @@ return {
 					cpp = { "clang_format" },
 					go = { "gofmt" },
 					markdown = { "markdownlint" },
-					rust = { "rustfmt" },
 					sh = { "shfmt" },
 					html = { "prettier" },
 					css = { "stylelint" },
