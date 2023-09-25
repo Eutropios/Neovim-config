@@ -6,14 +6,8 @@ return {
 			"hrsh7th/cmp-nvim-lsp",
 			"williamboman/mason-lspconfig.nvim",
 			"mfussenegger/nvim-lint", -- maps to "lint" in require
-			{ "folke/neodev.nvim", opts = {} },
 		},
 		config = function(_, _)
-			-- this setup must be done prior to requiring lspconfig
-			require("neodev").setup({
-				-- add any options here, or leave empty to use the default settings
-			})
-
 			local utils = require("utils")
 			local mason_lspconfig = require("mason-lspconfig")
 			local lspconfig = require("lspconfig")
