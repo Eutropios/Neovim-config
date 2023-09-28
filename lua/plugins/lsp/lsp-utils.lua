@@ -120,9 +120,9 @@ M.setup = function()
 	})
 end
 
+-- pulled from NavePnow dotfiles
 M.on_attach = function(client, bufnr)
 	-- Enable completion triggered by <c-x><c-o>
-	require("lsp_signature").on_attach(signature_setup, bufnr)
 	vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
 end
 

@@ -15,7 +15,10 @@ return {
 			require("lint").linters_by_ft = {
 				markdown = { "markdownlint" },
 				lua = { "selene" },
-				sh = { "shellcheck" },
+				css = { "stylelint" },
+				sass = { "stylelint" },
+				scss = { "stylelint" },
+				less = { "stylelint" },
 			}
 
 			lsp_utils.setup()
@@ -49,6 +52,12 @@ return {
 					lspconfig.clangd.setup({
 						on_attach = lsp_utils.on_attach,
 						capabilities = capabilities_cpp,
+					})
+				end,
+				["lua_ls"] = function()
+					lspconfig.lua_ls.setup({
+						on_attach = lsp_utils.on_attach,
+						capabilities = lsp_utils.capabilities,
 					})
 				end,
 			})
@@ -100,42 +109,34 @@ return {
 		end,
 	},
 	{
-		"ray-x/lsp_signature.nvim",
-		event = "BufReadPre",
-		opts = {},
-		config = function(_, opts)
-			require("lsp_signature").setup(opts)
-		end,
-	},
-	{
 		event = "BufReadPre",
 		"stevearc/conform.nvim",
 		opts = {},
 		config = function()
 			require("conform").setup({
 				formatters_by_ft = {
+					["*"] = { "trim_whitespace", "trim_newlines" },
+					c = { "clang_format" },
+					cmake = { "cmake_format" },
+					cpp = { "clang_format" },
+					css = { "stylelint" },
+					go = { "gofmt" },
+					html = { "prettier" },
+					javascript = { { "biome", "prettier" } },
 					lua = { "stylua" },
 					luadoc = { "stylua" },
-					toml = { "taplo" },
-					cmake = { "cmake_format" },
-					c = { "clang_format" },
-					cpp = { "clang_format" },
-					go = { "gofmt" },
 					markdown = { "markdownlint" },
-					sh = { "shfmt" },
-					html = { "prettier" },
-					css = { "stylelint" },
-					scss = { "stylelint" },
-					sass = { "stylelint" },
 					python = { "ruff_fix", "black" },
-					yaml = { "yamlfmt" },
-					javascript = { { "biome", "prettier" } },
+					sass = { "stylelint" },
+					scss = { "stylelint" },
+					sh = { "shfmt" },
+					toml = { "taplo" },
 					typescript = { { "biome", "prettier" } },
-					["*"] = { "trim_whitespace", "trim_newlines" },
+					yaml = { "yamlfmt" },
 				},
 				format_on_save = {
-					timeout_ms = 500,
 					lsp_fallback = true,
+					timeout_ms = 500,
 				},
 			})
 		end,

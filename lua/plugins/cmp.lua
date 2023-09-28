@@ -6,6 +6,9 @@ local M = {
 		"hrsh7th/cmp-nvim-lsp",
 		"hrsh7th/cmp-buffer",
 		"hrsh7th/cmp-path",
+		"hrsh7th/cmp-calc",
+		"hrsh7th/cmp-nvim-lsp-signature-help",
+		"hrsh7th/cmp-nvim-lua",
 		"saadparwaiz1/cmp_luasnip",
 	},
 	opts = function()
@@ -38,6 +41,10 @@ local M = {
 				expand = function(args)
 					require("luasnip").lsp_expand(args.body)
 				end,
+			},
+			window = {
+				completion = { border = "single" },
+				documentation = { border = "single" },
 			},
 			mapping = cmp.mapping.preset.insert({
 				["<C-n>"] = cmp.mapping.select_next_item({
@@ -80,8 +87,13 @@ local M = {
 				{ name = "nvim_lsp" },
 				{ name = "luasnip" },
 				{ name = "buffer" },
+				{ name = "path" },
+				{ name = "calc" },
+				{ name = "nvim_lsp_signature_help" },
+				{ name = "nvim_lua" },
 			}),
 			formatting = {
+				fields = { "kind", "abbr", "menu" },
 				format = function(entry, vim_item)
 					if vim.tbl_contains({ "path" }, entry.source.name) then
 						local icon, hl_group =

@@ -10,7 +10,7 @@ vim.api.nvim_create_autocmd("BufReadPost", {
 })
 
 vim.api.nvim_create_autocmd("FileType", {
-	pattern = { "gitcommit", "markdown", "rst" },
+	pattern = { "gitcommit" },
 	callback = function()
 		vim.opt_local.wrap = true
 		vim.opt_local.spell = true
@@ -21,7 +21,7 @@ vim.api.nvim_create_autocmd("FileType", {
 	pattern = { "*" },
 	callback = function(args)
 		local ft = vim.bo[args.buf].filetype
-		if ft == "yaml" then
+		if ft == "yaml" or ft == "markdown" then
 			vim.opt.shiftwidth = 2
 			vim.opt.tabstop = 2
 		elseif ft == "rst" then
@@ -30,10 +30,6 @@ vim.api.nvim_create_autocmd("FileType", {
 		else
 			vim.opt.shiftwidth = 4
 			vim.opt.tabstop = 4
-			if ft == "markdown" then
-				vim.opt_local.wrap = true
-				vim.opt_local.spell = false
-			end
 		end
 	end,
 })

@@ -26,7 +26,7 @@ vim.keymap.set(
 	"<cmd>bprevious<cr>",
 	{ desc = "Previous buffer" }
 )
-vim.keymap.set("n", "<Tab>", "<cmd>bnext<cr>", { desc = "Next buffer" })
+vim.keymap.set("n", "<S-Tab>", "<cmd>bnext<cr>", { desc = "Next buffer" })
 
 -- Select all
 vim.keymap.set("n", "<C-a>", "ggVG<cr>", { desc = "Select all" })
@@ -40,22 +40,47 @@ vim.keymap.set(
 )
 
 -- Clear search results
-vim.keymap.set("n", "<esc>", "<cmd>noh<cr>")
+vim.keymap.set("n", "<esc>", "<cmd>noh<cr>", { desc = "Clear search results" })
 
 -- Better indenting
-vim.keymap.set("v", "<", "<gv")
-vim.keymap.set("v", ">", ">gv")
+vim.keymap.set("v", "<", "<gv", { desc = "Unindent" })
+vim.keymap.set("v", ">", ">gv", { desc = "Indent" })
 
 -- Paste without replace clipboard
-vim.keymap.set("v", "p", '"_dP')
+vim.keymap.set("v", "p", '"_dP', { desc = "Paste without replace" })
 
 -- Move Lines
-vim.keymap.set("n", "<C-M-j>", ":m .+1<cr>==", { desc = "Move down" })
-vim.keymap.set("v", "<C-M-j>", ":m '>+1<cr>gv=gv", { desc = "Move down" })
-vim.keymap.set("i", "<C-M-j>", "<Esc>:m .+1<cr>==gi", { desc = "Move down" })
-vim.keymap.set("n", "<C-M-k>", ":m .-2<cr>==", { desc = "Move up" })
-vim.keymap.set("v", "<C-M-k>", ":m '<-2<cr>gv=gv", { desc = "Move up" })
-vim.keymap.set("i", "<C-M-k>", "<Esc>:m .-2<cr>==gi", { desc = "Move up" })
+vim.keymap.set(
+	"n",
+	"<C-M-j>",
+	":m .+1<cr>==",
+	{ desc = "Move line down 1 line" }
+)
+vim.keymap.set(
+	"v",
+	"<C-M-j>",
+	":m '>+1<cr>gv=gv",
+	{ desc = "Move selected lines down 1" }
+)
+vim.keymap.set(
+	"i",
+	"<C-M-j>",
+	"<Esc>:m .+1<cr>==gi",
+	{ desc = "Move block down 1" }
+)
+vim.keymap.set("n", "<C-M-k>", ":m .-2<cr>==", { desc = "Move line up 1 line" })
+vim.keymap.set(
+	"v",
+	"<C-M-k>",
+	":m '<-2<cr>gv=gv",
+	{ desc = "Move selected lines up 1" }
+)
+vim.keymap.set(
+	"i",
+	"<C-M-k>",
+	"<Esc>:m .-2<cr>==gi",
+	{ desc = "Move block up 1" }
+)
 
 vim.keymap.set(
 	{ "i", "v", "n" },
@@ -70,8 +95,6 @@ vim.keymap.set(
 	{ desc = "Close buffer" }
 )
 
--- CLose buffer
-
 -- Exit neovim
 vim.keymap.set({ "i", "v", "n" }, "<C-q>", "<cmd>q<cr>", { desc = "Exit Vim" })
 vim.keymap.set(
@@ -82,8 +105,8 @@ vim.keymap.set(
 )
 
 -- Better move
-vim.keymap.set("n", "<C-d>", "<C-d>zz")
-vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Move up 15 lines" })
+vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Move down 15 lines" })
 
 -- toggle options
 vim.keymap.set("n", "<leader>tw", function()
@@ -108,7 +131,7 @@ vim.keymap.set(
 	{ desc = "Toggle Quickfix Window" }
 )
 
--- stuff from old config
+-- back to netrw
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, { desc = "Return to Netrw" })
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -131,10 +154,10 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 vim.keymap.set(
 	"n",
-	"<leader>s",
-	[[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]]
+	"<leader>x",
+	"<cmd>!chmod +x %<CR>",
+	{ silent = true, desc = "chmod file" }
 )
-vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 vim.keymap.set("n", "<leader><leader>", function()
 	vim.cmd("so")
 end, { desc = "shoutout/source" })
