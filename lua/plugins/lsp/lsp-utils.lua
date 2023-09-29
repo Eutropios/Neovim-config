@@ -9,12 +9,12 @@ M.setup = function()
 	vim.diagnostic.config({
 		virtual_text = false,
 		float = {
-			focusable = false,
-			style = "minimal",
 			border = "rounded",
-			source = "always",
+			focusable = false,
 			header = "",
 			prefix = "",
+			source = "always",
+			style = "minimal",
 		},
 		signs = true,
 		underline = true,
@@ -108,12 +108,12 @@ M.setup = function()
 	vim.api.nvim_create_autocmd("CursorHold", {
 		callback = function()
 			local opts = {
-				focusable = false,
-				close_events = { "BufLeave", "CursorMoved", "InsertEnter" },
 				border = "rounded",
-				source = "always",
+				close_events = { "BufLeave", "CursorMoved", "InsertEnter" },
+				focusable = false,
 				prefix = " ",
 				scope = "cursor",
+				source = "always",
 			}
 			vim.diagnostic.open_float(nil, opts)
 		end,

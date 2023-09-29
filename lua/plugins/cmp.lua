@@ -3,12 +3,12 @@ local M = {
 	version = false, -- last release is way too old
 	event = "BufReadPre",
 	dependencies = {
-		"hrsh7th/cmp-nvim-lsp",
 		"hrsh7th/cmp-buffer",
-		"hrsh7th/cmp-path",
 		"hrsh7th/cmp-calc",
+		"hrsh7th/cmp-nvim-lsp",
 		"hrsh7th/cmp-nvim-lsp-signature-help",
 		"hrsh7th/cmp-nvim-lua",
+		"hrsh7th/cmp-path",
 		"saadparwaiz1/cmp_luasnip",
 	},
 	opts = function()
@@ -84,13 +84,13 @@ local M = {
 				end, { "i", "s" }),
 			}),
 			sources = cmp.config.sources({
-				{ name = "nvim_lsp" },
-				{ name = "luasnip" },
 				{ name = "buffer" },
-				{ name = "path" },
 				{ name = "calc" },
+				{ name = "luasnip" },
+				{ name = "nvim_lsp" },
 				{ name = "nvim_lsp_signature_help" },
 				{ name = "nvim_lua" },
+				{ name = "path" },
 			}),
 			formatting = {
 				fields = { "kind", "abbr", "menu" },

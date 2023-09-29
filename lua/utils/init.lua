@@ -53,6 +53,7 @@ M.lsp_kinds = {
 M.mason_packages = {
 	"awk-language-server",
 	"bash-language-server",
+	"biome",
 	"black",
 	"clang-format",
 	"clangd",
@@ -71,6 +72,7 @@ M.mason_packages = {
 	"stylua",
 	"taplo",
 	"typescript-language-server",
+	"vale-ls",
 	"vim-language-server",
 	"yaml-language-server",
 	"yamlfmt",
@@ -79,6 +81,7 @@ M.mason_packages = {
 M.lsp_servers = {
 	"awk_ls",
 	"bashls",
+	"biome",
 	"clangd",
 	"gopls",
 	"jsonls",
@@ -88,6 +91,7 @@ M.lsp_servers = {
 	"ruff_lsp",
 	"taplo",
 	"tsserver",
+	"vale_ls",
 	"vimls",
 	"yamlls",
 }

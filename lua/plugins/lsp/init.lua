@@ -4,8 +4,8 @@ return {
 		event = "BufReadPre",
 		dependencies = {
 			"hrsh7th/cmp-nvim-lsp",
-			"williamboman/mason-lspconfig.nvim",
 			"mfussenegger/nvim-lint", -- maps to "lint" in require
+			"williamboman/mason-lspconfig.nvim",
 		},
 		config = function(_, _)
 			local utils = require("utils")
@@ -13,12 +13,15 @@ return {
 			local lspconfig = require("lspconfig")
 			local lsp_utils = require("plugins.lsp.lsp-utils")
 			require("lint").linters_by_ft = {
-				markdown = { "markdownlint" },
-				lua = { "selene" },
 				css = { "stylelint" },
+				javascript = { "biome" },
+				json = { "biome" },
+				less = { "stylelint" },
+				lua = { "selene" },
+				markdown = { "markdownlint" },
 				sass = { "stylelint" },
 				scss = { "stylelint" },
-				less = { "stylelint" },
+				typescript = { "biome" },
 			}
 
 			lsp_utils.setup()

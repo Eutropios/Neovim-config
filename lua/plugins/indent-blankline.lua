@@ -1,20 +1,36 @@
 local M = {
 	"lukas-reineke/indent-blankline.nvim",
+	main = "ibl",
 	event = "BufReadPre",
 	opts = {
-		space_char_blankline = " ",
-		show_current_context = true,
-		show_current_context_start = true,
-		filetype_exclude = {
-			"coc-explorer",
-			"dashboard",
-			"floaterm",
-			"alpha",
-			"help",
-			"packer",
-			"NvimTree",
+		indent = {
+			char = "▎",
+			tab_char = "▎",
+			highlight = { "CursorColumn", "Whitespace" },
+		},
+		whitespace = {
+			highlight = { "CursorColumn", "Whitespace" },
+			remove_blankline_trail = false,
+		},
+		scope = {
+			char = "▍",
+			highlight = { "Function" },
+		},
+		exclude = {
+			filetypes = {
+				"coc-explorer",
+				"dashboard",
+				"floaterm",
+				"alpha",
+				"help",
+				"packer",
+				"NvimTree",
+			},
 		},
 	},
+	config = function(_, opts)
+		require("ibl").setup(opts)
+	end,
 }
 
 return M
