@@ -136,6 +136,7 @@ return {
 					toml = { "taplo" },
 					typescript = { { "biome", "prettier" } },
 					yaml = { "yamlfmt" },
+					zsh = { "shfmt" },
 				},
 				format_on_save = {
 					lsp_fallback = true,

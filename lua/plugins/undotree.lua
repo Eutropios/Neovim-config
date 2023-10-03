@@ -3,9 +3,14 @@ local M = {
 	"mbbill/undotree",
 	keys = {
 		{
-			"<leader>u",
+			"<leader>ut",
 			"<cmd>UndotreeToggle<cr>",
-			desc = "UndotreeToggle",
+			desc = "Toggle Undotree",
+		},
+		{
+			"<leader>uf",
+			"<cmd>UndotreeFocus<cr>",
+			desc = "Focus on Undotree",
 		},
 	},
 }

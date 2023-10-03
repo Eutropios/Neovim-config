@@ -22,7 +22,7 @@ M.setup = function()
 		severity_sort = false,
 	})
 
-	---- sign column
+	-- sign column
 	local signs = require("utils").lsp_signs
 
 	for type, icon in pairs(signs) do

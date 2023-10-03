@@ -53,12 +53,12 @@ Prerequisites to be installed via your Linux distribution's package manager:
 * leap.nvim (Advanced Motions) - <https://github.com/ggandor/leap.nvim>
 * neogen (Generate Annotations) - <https://github.com/danymat/neogen>
 * nvim-colorizer.lua (Colour Code Visualizer) - <https://github.com/norcalli/nvim-colorizer.lua>
+* nvim-spectre (Find/Replace Panel) - <https://github.com/nvim-pack/nvim-spectre>
 * telescope.nvim (Fuzzy Finder) - <https://github.com/nvim-telescope/telescope.nvim>
   * plenary.nvim - <https://github.com/nvim-lua/plenary.nvim>
   * telescope-fzf-native.nvim - <https://github.com/nvim-telescope/telescope-fzf-native.nvim>
 * trouble.nvim (Diagnostics Panel) - <https://github.com/folke/trouble.nvim>
 * undotree (Undotree) - <https://github.com/mbbill/undotree>
-* vim-illuminate (Illuminate Occurences) - <https://github.com/RRethy/vim-illuminate>
 * which-key.nvim (Key Bindings) - <https://github.com/folkr/which-key.nvim>
 
 ## Acknowledgement

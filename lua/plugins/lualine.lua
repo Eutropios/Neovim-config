@@ -64,7 +64,7 @@ local M = {
 				lualine_y = {},
 				lualine_z = {},
 			},
-			extensions = { "lazy", "nvim-tree" },
+			extensions = { "lazy" },
 		}
 	end,
 }

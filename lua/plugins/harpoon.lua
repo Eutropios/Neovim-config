@@ -1,5 +1,4 @@
 local M = {
-	event = "VeryLazy",
 	"ThePrimeagen/harpoon",
 	keys = {
 		{

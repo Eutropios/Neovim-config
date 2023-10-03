@@ -30,7 +30,6 @@ local M = {
 			desc = "Live grep",
 		},
 	},
-	event = "VeryLazy",
 	config = function()
 		local ts = require("telescope")
 		ts.setup({

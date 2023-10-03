@@ -168,11 +168,13 @@ vim.keymap.set("n", "<leader>gs", vim.cmd.Git, { desc = "Git" })
 local wk = require("which-key")
 wk.register({
 	["<leader>"] = {
+		{ name = "Leader Commands" },
 		l = { "<cmd>Lazy<cr>", "Open Lazy" },
 		v = { name = "LSP and Mason" },
 		w = { name = "Workspace" },
 		h = { name = "Harpoon" },
 		t = { name = "Trouble" },
 		p = { name = "Telescope" },
+		u = { name = "Undotree" },
 	},
 })
