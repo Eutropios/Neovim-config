@@ -1,21 +1,21 @@
 local utils = require("utils")
 
 -- Remap command key
-vim.keymap.set("n", "<leader><leader>", ":")
-vim.keymap.set("n", "<C-p>", ":")
+vim.keymap.set("n", "<C-p>", ":", { desc = "Command Mode" })
+vim.keymap.set("n", "<leader><leader>", ":", { desc = "Command Mode" })
 
 -- Better up/down
 vim.keymap.set(
 	"n",
 	"j",
 	"v:count == 0 ? 'gj' : 'j'",
-	{ expr = true, silent = true }
+	{ expr = true, silent = true, desc = "Move cursor up" }
 )
 vim.keymap.set(
 	"n",
 	"k",
 	"v:count == 0 ? 'gk' : 'k'",
-	{ expr = true, silent = true }
+	{ expr = true, silent = true, desc = "Move cursor down" }
 )
 
 -- Navigate buffers
@@ -134,9 +134,6 @@ vim.keymap.set(
 -- back to netrw
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, { desc = "Return to Netrw" })
 
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
-
 vim.keymap.set("n", "J", "mzJ`z")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
@@ -147,10 +144,10 @@ vim.keymap.set("n", "<leader>f", function()
 end, { desc = "Lsp formatting" })
 
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
-vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
-vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
+vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
+vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 
 vim.keymap.set(
 	"n",
@@ -158,9 +155,6 @@ vim.keymap.set(
 	"<cmd>!chmod +x %<CR>",
 	{ silent = true, desc = "chmod file" }
 )
-vim.keymap.set("n", "<leader><leader>", function()
-	vim.cmd("so")
-end, { desc = "shoutout/source" })
 
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git, { desc = "Git" })
 
@@ -168,13 +162,14 @@ vim.keymap.set("n", "<leader>gs", vim.cmd.Git, { desc = "Git" })
 local wk = require("which-key")
 wk.register({
 	["<leader>"] = {
-		{ name = "Leader Commands" },
+		{ name = "Leader Commands" }, -- naming the leader Commands
+		h = { name = "Harpoon" },
 		l = { "<cmd>Lazy<cr>", "Open Lazy" },
+		p = { name = "Telescope" },
+		s = { name = "Spectre Find/Replace" },
+		t = { name = "Trouble" },
+		u = { name = "Undotree" },
 		v = { name = "LSP and Mason" },
 		w = { name = "Workspace" },
-		h = { name = "Harpoon" },
-		t = { name = "Trouble" },
-		p = { name = "Telescope" },
-		u = { name = "Undotree" },
 	},
 })
