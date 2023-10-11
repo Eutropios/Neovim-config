@@ -9,17 +9,34 @@ local M = {
 			-- Number Sign Fold sep
 			segments = {
 				{
-					text = { builtin.lnumfunc },
 					click = "v:lua.ScLa",
+					text = { builtin.lnumfunc },
 				},
 				{
-					sign = { name = { ".*" }, colwidth = 1 },
 					click = "v:lua.ScSa",
+					sign = {
+						auto = true,
+						colwidth = 1,
+						namespace = { "gitsigns" },
+						wrap = true,
+					},
 				},
 				{
-					text = { " ", builtin.foldfunc, " " },
-					condition = { true, builtin.not_empty },
+					click = "v:lua.ScSa",
+					sign = {
+						auto = true,
+						maxwidth = 1,
+						name = { "Diagnostic" },
+					},
+				},
+				{
+					click = "v:lua.ScSa",
+					sign = { namespace = { ".*" }, colwidth = 1 },
+				},
+				{
 					click = "v:lua.ScFa",
+					condition = { true, builtin.not_empty },
+					text = { " ", builtin.foldfunc, " " },
 				},
 			},
 		}

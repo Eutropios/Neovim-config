@@ -4,40 +4,20 @@ local M = {
 		{
 			"<C-_>",
 			mode = "n",
-			"<Plug>(comment_toggle_linewise_current)",
-		},
-		{
-			"<C-_>",
-			mode = "x",
-			"<Plug>(comment_toggle_linewise_visual)",
-		},
-		{
-			"<C-M-_>",
-			mode = "n",
 			"<Plug>(comment_toggle_blockwise_current)",
 		},
 		{
-			"<C-M-_>",
+			"<C-_>",
 			mode = "x",
 			"<Plug>(comment_toggle_blockwise_visual)",
 		},
 		{
 			"<C-/>",
 			mode = "n",
-			"<Plug>(comment_toggle_linewise_current)",
-		},
-		{
-			"<C-/>",
-			mode = "x",
-			"<Plug>(comment_toggle_linewise_visual)",
-		},
-		{
-			"<C-M-/>",
-			mode = "n",
 			"<Plug>(comment_toggle_blockwise_current)",
 		},
 		{
-			"<C-M-/>",
+			"<C-/>",
 			mode = "x",
 			"<Plug>(comment_toggle_blockwise_visual)",
 		},

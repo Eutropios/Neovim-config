@@ -13,15 +13,16 @@ return {
 			local lspconfig = require("lspconfig")
 			local lsp_utils = require("plugins.lsp.lsp-utils")
 			require("lint").linters_by_ft = {
+				bash = { "shellcheck" },
 				css = { "stylelint" },
-				javascript = { "biome" },
-				json = { "biome" },
-				less = { "stylelint" },
 				lua = { "selene" },
 				markdown = { "markdownlint" },
+				python = { "ruff", "mypy" },
 				sass = { "stylelint" },
 				scss = { "stylelint" },
-				typescript = { "biome" },
+				sh = { "shellcheck" },
+				zsh = { "shellcheck" },
+				-- waiting for biome support for js, ts, and json
 			}
 
 			lsp_utils.setup()
@@ -120,12 +121,14 @@ return {
 				formatters_by_ft = {
 					["*"] = { "trim_whitespace", "trim_newlines" },
 					c = { "clang_format" },
+					bash = { "shfmt" },
 					cmake = { "cmake_format" },
 					cpp = { "clang_format" },
 					css = { "stylelint" },
 					go = { "gofmt" },
 					html = { "prettier" },
 					javascript = { { "biome", "prettier" } },
+					json = { { "biome", "prettier" } },
 					lua = { "stylua" },
 					luadoc = { "stylua" },
 					markdown = { "markdownlint" },
@@ -142,6 +145,41 @@ return {
 					lsp_fallback = true,
 					timeout_ms = 500,
 				},
+			})
+			local util = require("conform.util")
+			util.add_formatter_args(require("conform.formatters.taplo"), {
+				"format",
+				"--option",
+				"align_comments=true",
+				"--option",
+				"align_entries=true",
+				"--option",
+				"allowed_blank_lines=2",
+				"--option",
+				"array_auto_collapse=true",
+				"--option",
+				"array_auto_expand=true",
+				"--option",
+				"array_trailing_comma=true",
+				"--option",
+				"column_width=99",
+				"--option",
+				"compact_arrays=true",
+				"--option",
+				"compact_inline_tables=true",
+				"--option",
+				"indent_entries=true",
+				"--option",
+				"indent_tables=true",
+				"--option",
+				"inline_table_expand=true",
+				"--option",
+				"reorder_arrays=true",
+				"--option",
+				"reorder_keys=true",
+				"--option",
+				"trailing_newline=true",
+				"-",
 			})
 		end,
 	},

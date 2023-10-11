@@ -110,21 +110,21 @@ local M = {
 					-- default args
 					args = {
 						"--color=never",
+						"--column",
+						"--line-number",
 						"--no-heading",
 						"--with-filename",
-						"--line-number",
-						"--column",
 					},
 					options = {
-						["ignore-case"] = {
-							value = "--ignore-case",
-							icon = "[I]",
-							desc = "ignore case",
-						},
 						["hidden"] = {
-							value = "--hidden",
 							desc = "hidden file",
 							icon = "[H]",
+							value = "--hidden",
+						},
+						["ignore-case"] = {
+							desc = "ignore case",
+							icon = "[I]",
+							value = "--ignore-case",
 						},
 						-- you can put any rg search option you want here it can toggle with
 						-- show_option function
@@ -137,15 +137,15 @@ local M = {
 						"-s",
 					},
 					options = {
-						["ignore-case"] = {
-							value = "-i",
-							icon = "[I]",
-							desc = "ignore case",
-						},
 						["hidden"] = {
-							value = "--hidden",
 							desc = "hidden file",
 							icon = "[H]",
+							value = "--hidden",
+						},
+						["ignore-case"] = {
+							desc = "ignore case",
+							icon = "[I]",
+							value = "-i",
 						},
 					},
 				},

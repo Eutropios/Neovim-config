@@ -1,0 +1,10 @@
+{
+    "formatter": {
+        "enabled": true,
+        "formatWithErrors": false,
+        "indentStyle": "space",
+        "indentSize": 4,
+        "lineWidth": 80,
+        "ignore": []
+    }
+}

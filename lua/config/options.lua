@@ -52,3 +52,5 @@ vim.opt.mousemoveevent = true
 vim.opt.wildmode = "longest:full:full"
 vim.opt.wildignore =
 	"*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx,*DS_STORE,*.db"
+
+vim.opt.guicursor = "n-sm:block,i-ci-v-c-ve:ver25,r-cr-o:hor20"
