@@ -15,12 +15,16 @@ return {
 			require("lint").linters_by_ft = {
 				bash = { "shellcheck" },
 				css = { "stylelint" },
+				latex = { "vale" },
 				lua = { "selene" },
-				markdown = { "markdownlint" },
+				markdown = { "vale", "markdownlint" },
 				python = { "ruff", "mypy" },
+				rst = { "vale" },
 				sass = { "stylelint" },
 				scss = { "stylelint" },
 				sh = { "shellcheck" },
+				tex = { "vale" },
+				txt = { "vale" },
 				zsh = { "shellcheck" },
 				-- waiting for biome support for js, ts, and json
 			}
@@ -120,8 +124,8 @@ return {
 			require("conform").setup({
 				formatters_by_ft = {
 					["*"] = { "trim_whitespace", "trim_newlines" },
-					c = { "clang_format" },
 					bash = { "shfmt" },
+					c = { "clang_format" },
 					cmake = { "cmake_format" },
 					cpp = { "clang_format" },
 					css = { "stylelint" },

@@ -24,14 +24,9 @@ local M = {
 				{
 					click = "v:lua.ScSa",
 					sign = {
-						auto = true,
 						maxwidth = 1,
 						name = { "Diagnostic" },
 					},
-				},
-				{
-					click = "v:lua.ScSa",
-					sign = { namespace = { ".*" }, colwidth = 1 },
 				},
 				{
 					click = "v:lua.ScFa",
