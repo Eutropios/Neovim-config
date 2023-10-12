@@ -4,7 +4,7 @@ My current NeoVim config. Nothing more, nothing less.
 This exists to keep my config safe in case something goes bonkers.  
 
 This config uses Lazy.nvim as its package installer, and a colour scheme similar
-to the of the Default Dark+ VSCode Theme.  
+to VSCode's Default Dark+ theme.  
 
 Package Manager: [Lazy.nvim](https://github.com/folke/lazy.nvim)  
 Colourscheme: [vscode.nvim](https://github.com/Mofiqul/vscode.nvim)  
