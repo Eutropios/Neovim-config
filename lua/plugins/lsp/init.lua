@@ -17,7 +17,7 @@ return {
 				css = { "stylelint" },
 				latex = { "vale" },
 				lua = { "selene" },
-				markdown = { "vale", "markdownlint" },
+				markdown = { "markdownlint" },
 				python = { "ruff", "mypy" },
 				rst = { "vale" },
 				sass = { "stylelint" },

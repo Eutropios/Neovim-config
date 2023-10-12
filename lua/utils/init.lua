@@ -72,10 +72,12 @@ M.mason_packages = {
 	"stylua",
 	"taplo",
 	"typescript-language-server",
+	"vale",
 	"vale-ls",
 	"vim-language-server",
 	"yaml-language-server",
 	"yamlfmt",
+	"shellcheck",
 }
 
 M.lsp_servers = {

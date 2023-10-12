@@ -17,20 +17,24 @@ vim.api.nvim_create_autocmd("FileType", {
 	end,
 })
 
+local lang_settings = {
+	yaml = { shift_tab = 2 },
+	markdown = { shift_tab = 2, ruler_column = 80 },
+	rst = { shift_tab = 3, ruler_column = 80 },
+	python = { ruler_column = 88 },
+}
+
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = { "*" },
 	callback = function(args)
 		local ft = vim.bo[args.buf].filetype
-		if ft == "yaml" or ft == "markdown" then
-			vim.opt.shiftwidth = 2
-			vim.opt.tabstop = 2
-		elseif ft == "rst" then
-			vim.opt.shiftwidth = 3
-			vim.opt.tabstop = 3
-		else
-			vim.opt.shiftwidth = 4
-			vim.opt.tabstop = 4
-		end
+		local ft_settings = lang_settings[ft] or {}
+
+		-- set the shiftwidth and tabstop to 4 unless stateed otherwise
+		vim.opt.shiftwidth = ft_settings.shift_tab or 4
+		vim.opt.tabstop = ft_settings.shift_tab or 4
+		-- set a ruler column if specificed in lang_settings
+		vim.opt.colorcolumn = { ft_settings.ruler_column or 0 }
 	end,
 })
 
