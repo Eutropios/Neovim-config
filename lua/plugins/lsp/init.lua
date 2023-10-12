@@ -15,6 +15,8 @@ return {
 			require("lint").linters_by_ft = {
 				bash = { "shellcheck" },
 				css = { "stylelint" },
+				javascript = { "biomejs" },
+				json = { "biomejs" },
 				latex = { "vale" },
 				lua = { "selene" },
 				markdown = { "markdownlint" },
@@ -25,8 +27,8 @@ return {
 				sh = { "shellcheck" },
 				tex = { "vale" },
 				txt = { "vale" },
+				typescript = { "biomejs" },
 				zsh = { "shellcheck" },
-				-- waiting for biome support for js, ts, and json
 			}
 
 			lsp_utils.setup()

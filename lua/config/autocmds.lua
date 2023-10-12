@@ -27,8 +27,7 @@ local lang_settings = {
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = { "*" },
 	callback = function(args)
-		local ft = vim.bo[args.buf].filetype
-		local ft_settings = lang_settings[ft] or {}
+		local ft_settings = lang_settings[vim.bo[args.buf].filetype] or {}
 
 		-- set the shiftwidth and tabstop to 4 unless stateed otherwise
 		vim.opt.shiftwidth = ft_settings.shift_tab or 4
