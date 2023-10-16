@@ -9,11 +9,10 @@ local M = {
 	},
 	config = function()
 		require("glow").setup({
-			style = "light",
-			width_ratio = 0.95,
+			border = "shadow", -- floating window border config
 			height_ratio = 0.95,
-			border = "shadow",
-			width = 250,
+			style = "dark",
+			width_ratio = 0.95,
 		})
 	end,
 }

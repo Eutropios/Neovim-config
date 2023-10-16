@@ -1,5 +1,8 @@
 {
     "$schema": "https://raw.githubusercontent.com/sumneko/vscode-lua/master/setting/schema.json",
+    "Lua.completion.callSnippet": "Replace",
     "Lua.diagnostics.globals": ["vim"],
+    "Lua.runtime.version": "Lua 5.1",
+    "Lua.telemetry.enable": false,
     "workspace.checkThirdParty": false
 }

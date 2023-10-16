@@ -15,11 +15,13 @@ Prerequisites to be installed via your Linux distribution's package manager:
 
 ## Packages
 
-### LSP and Code Completion
+### LSP, Linting, Formatting, and Code Completion
 
 * [conform.nvim](https://github.com/stevearc/conform.nvim)
 * [mason.nvim](https://github.com/williamboman/mason.nvim)
   * [mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim)
+* [neodev.nvim](https://github.com/folke/neodev.nvim)
+* [nvim-autopairs](https://github.com/windwp/nvim-autopairs)
 * [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
   * [cmp-buffer](https://github.com/hrsh7th/cmp-buffer)
   * [cmp-calc](https://github.com/hrsh7th/cmp-calc)
@@ -30,7 +32,6 @@ Prerequisites to be installed via your Linux distribution's package manager:
   * [cmp_luasnip](https://github.com/saadparwaiz1/cmp_luasnip)
   * [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
     * [friendly-snippets](https://github.com/rafamadriz/friendly-snippets)
-* [nvim-autopairs](https://github.com/windwp/nvim-autopairs)
 * [nvim-lint](https://github.com/mfussenegger/nvim-lint)
 * [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
 * [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)

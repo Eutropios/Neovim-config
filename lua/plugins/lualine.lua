@@ -16,13 +16,13 @@ local M = {
 		local location = { "location", padding = 0 }
 		return {
 			options = {
-				icons_enabled = true,
-				theme = "vscode",
-				section_separators = "",
+				always_divide_middle = true,
 				component_separators = "",
 				disabled_filetypes = { "alpha", "dashboard" },
-				always_divide_middle = true,
 				globalstatus = true,
+				icons_enabled = true,
+				section_separators = "",
+				theme = "vscode",
 			},
 			sections = {
 				lualine_a = { "branch" },
