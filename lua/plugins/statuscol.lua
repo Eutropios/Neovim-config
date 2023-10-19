@@ -15,7 +15,6 @@ local M = {
 				{
 					click = "v:lua.ScSa",
 					sign = {
-						auto = true,
 						colwidth = 1,
 						namespace = { "gitsigns" },
 						wrap = true,
