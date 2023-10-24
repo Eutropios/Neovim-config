@@ -21,7 +21,7 @@ return {
 				biblatex = { "vale" },
 				bibtex = { "vale" },
 				css = { "stylelint" },
-				gitcommit = { "commitlint" },
+				gitcommit = { "gitlint" },
 				javascript = { "biomejs" },
 				json = { "biomejs" },
 				json5 = { "biomejs" },

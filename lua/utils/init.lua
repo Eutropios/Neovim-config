@@ -58,7 +58,7 @@ M.mason_packages = {
 	"clang-format",
 	"clangd",
 	"cmakelang",
-	"commitlint",
+	"gitlint",
 	"gopls",
 	"lua-language-server",
 	"markdownlint",
