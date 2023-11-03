@@ -148,7 +148,7 @@ return {
 					lua = { "stylua" },
 					luadoc = { "stylua" },
 					markdown = { "markdownlint" },
-					python = { "ruff_fix", "black" },
+					python = { "ruff_fix" },
 					sass = { "stylelint" },
 					scss = { "stylelint" },
 					sh = { "shfmt" },

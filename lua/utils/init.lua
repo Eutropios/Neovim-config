@@ -54,7 +54,6 @@ M.mason_packages = {
 	"awk-language-server",
 	"bash-language-server",
 	"biome",
-	"black",
 	"clang-format",
 	"clangd",
 	"cmakelang",
