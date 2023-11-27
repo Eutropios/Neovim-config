@@ -104,7 +104,7 @@ return {
 					package_uninstalled = "✗",
 				},
 				width = 0.95,
-				height = 0.90,
+				height = 0.86,
 			},
 		},
 		config = function(_, opts)
