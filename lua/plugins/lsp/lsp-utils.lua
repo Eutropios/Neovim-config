@@ -1,7 +1,10 @@
 local M = {}
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.insertReplaceSupport = true
+capabilities.textDocument.completion.completionItem.preselectSupport = true
 capabilities.textDocument.completion.completionItem.snippetSupport = true
+capabilities.workspace.didChangeWatchedFiles.dynamicRegistration = false
 
 M.capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 

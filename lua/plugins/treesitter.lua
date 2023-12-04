@@ -64,6 +64,7 @@ local M = {
 			"regex",
 			"requirements",
 			"rst",
+			"rust",
 			"scss",
 			"ssh_config",
 			"toml",

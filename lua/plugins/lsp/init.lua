@@ -15,6 +15,7 @@ return {
 			local utils = require("utils")
 			local mason_lspconfig = require("mason-lspconfig")
 			local lspconfig = require("lspconfig")
+			local lspconfig_utils = require("lspconfig/util")
 			local lsp_utils = require("plugins.lsp.lsp-utils")
 			require("lint").linters_by_ft = {
 				bash = { "shellcheck" },
@@ -77,6 +78,26 @@ return {
 					lspconfig.lua_ls.setup({
 						on_attach = lsp_utils.on_attach,
 						capabilities = lsp_utils.capabilities,
+					})
+				end,
+				["rust_analyzer"] = function()
+					lspconfig.rust_analyzer.setup({
+						on_attach = lsp_utils.on_attach,
+						capabilities = lsp_utils.capabilities,
+						root_dir = lspconfig_utils.root_pattern("Cargo.toml"),
+						settings = {
+							["rust-analyzer"] = {
+								cargo = {
+									allFeatures = true,
+								},
+								check = {
+									command = "clippy",
+								},
+								diagnostics = {
+									enable = true,
+								},
+							},
+						},
 					})
 				end,
 			})
@@ -148,7 +169,8 @@ return {
 					lua = { "stylua" },
 					luadoc = { "stylua" },
 					markdown = { "markdownlint" },
-					python = { "ruff_fix" },
+					python = { "ruff_format" },
+					rust = { "rustfmt" },
 					sass = { "stylelint" },
 					scss = { "stylelint" },
 					sh = { "shfmt" },

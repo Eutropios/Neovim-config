@@ -89,6 +89,7 @@ M.lsp_servers = {
 	"marksman",
 	"pyright",
 	"ruff_lsp",
+	"rust_analyzer",
 	"taplo",
 	"tsserver",
 	"vale_ls",
