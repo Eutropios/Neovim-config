@@ -18,10 +18,15 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 local lang_settings = {
-	yaml = { shift_tab = 2 },
+	html = { ruler_column = 100 },
+	javascript = { ruler_column = 100 },
+	lua = { ruler_column = 80 },
 	markdown = { shift_tab = 2, ruler_column = 80 },
-	rst = { shift_tab = 3, ruler_column = 80 },
 	python = { ruler_column = 88 },
+	rst = { shift_tab = 3, ruler_column = 80 },
+	toml = { ruler_column = 99 },
+	typescript = { ruler_column = 100 },
+	yaml = { shift_tab = 2, ruler_column = 80 },
 }
 
 vim.api.nvim_create_autocmd("FileType", {
@@ -29,7 +34,7 @@ vim.api.nvim_create_autocmd("FileType", {
 	callback = function(args)
 		local ft_settings = lang_settings[vim.bo[args.buf].filetype] or {}
 
-		-- set the shiftwidth and tabstop to 4 unless stateed otherwise
+		-- set the shiftwidth and tabstop to 4 unless stated otherwise
 		vim.opt.shiftwidth = ft_settings.shift_tab or 4
 		vim.opt.tabstop = ft_settings.shift_tab or 4
 		-- set a ruler column if specificed in lang_settings
