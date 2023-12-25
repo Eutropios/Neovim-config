@@ -46,25 +46,25 @@ M.setup = function()
 	vim.keymap.set(
 		"n",
 		"<leader>vf",
-		"<cmd>Telescope lsp_definitions<cr>",
+		vim.lsp.buf.hover,
 		vim.tbl_extend("error", bufopts, { desc = "View Definition" })
 	)
 	vim.keymap.set(
 		"n",
 		"<leader>vr",
-		"<cmd>Telescope lsp_references<cr>",
+		vim.lsp.buf.references,
 		vim.tbl_extend("error", bufopts, { desc = "View References" })
 	)
 	vim.keymap.set(
 		"n",
 		"<leader>vi",
-		"<cmd>Telescope lsp_implementations<cr>",
-		vim.tbl_extend("error", bufopts, { desc = "View Implementations" })
+		vim.lsp.buf.implementation,
+		vim.tbl_extend("error", bufopts, { desc = "View Implementation" })
 	)
 	vim.keymap.set(
 		"n",
 		"<leader>vt",
-		"<cmd>Telescope lsp_type_definitions<cr>",
+		vim.lsp.buf.type_definition,
 		vim.tbl_extend("error", bufopts, { desc = "View Type Defs" })
 	)
 	vim.keymap.set(

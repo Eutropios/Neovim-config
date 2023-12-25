@@ -6,7 +6,7 @@ M.git_colors = {
 	GitDelete = "#FE747A",
 }
 M.lsp_signs = {
-	Error = "✖ ",
+	Error = "󰅚 ",
 	Hint = "󰌶 ",
 	Info = " ",
 	Warn = "! ",
