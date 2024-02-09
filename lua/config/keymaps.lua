@@ -166,6 +166,7 @@ wk.register({
 		h = { name = "Harpoon" },
 		l = { "<cmd>Lazy<cr>", "Open Lazy" },
 		p = { name = "Telescope" },
+		r = { name = "Neotest" },
 		s = { name = "Spectre Find/Replace" },
 		t = { name = "Trouble" },
 		u = { name = "Undotree" },

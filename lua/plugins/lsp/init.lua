@@ -66,6 +66,12 @@ return {
 						},
 					})
 				end,
+				["ruff_lsp"] = function()
+					lspconfig.ruff_lsp.setup({
+						on_attach = lsp_utils.on_attach,
+						capabilities = lsp_utils.capabilities,
+					})
+				end,
 				["clangd"] = function()
 					local capabilities_cpp = lsp_utils.capabilities
 					capabilities_cpp.offsetEncoding = { "utf-16" }

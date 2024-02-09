@@ -18,6 +18,7 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 local lang_settings = {
+	gitcommit = { ruler_column = 72 },
 	html = { ruler_column = 100 },
 	javascript = { ruler_column = 100 },
 	lua = { ruler_column = 80 },

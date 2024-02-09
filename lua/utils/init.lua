@@ -66,6 +66,7 @@ M.mason_packages = {
 	"pyright",
 	"ruff-lsp",
 	"selene",
+	"shellcheck",
 	"shfmt",
 	"stylelint",
 	"stylua",
@@ -76,7 +77,6 @@ M.mason_packages = {
 	"vim-language-server",
 	"yaml-language-server",
 	"yamlfmt",
-	"shellcheck",
 }
 
 M.lsp_servers = {
