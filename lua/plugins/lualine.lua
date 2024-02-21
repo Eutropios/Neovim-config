@@ -17,28 +17,40 @@ local M = {
 		return {
 			options = {
 				always_divide_middle = true,
-				component_separators = "",
+				component_separators = { left = "", right = "" },
 				disabled_filetypes = { "alpha", "dashboard" },
 				globalstatus = true,
 				icons_enabled = true,
-				section_separators = "",
+				section_separators = { left = "", right = "" },
 				theme = "vscode",
 			},
 			sections = {
 				lualine_a = { "branch" },
 				lualine_b = {
+					"normal",
 					{ "diff", source = diff_source },
-					"diagnostics",
 				},
 				lualine_c = {
+					"diagnostics",
 					{
 						require("lazy.status").updates,
 						cond = require("lazy.status").has_updates,
 					},
 				},
-				lualine_x = { "encoding", "filetype" },
+				lualine_x = { "filesize", "encoding", "filetype" },
 				lualine_y = { "progress" },
-				lualine_z = { location, "selectioncount" },
+				lualine_z = {
+					{
+						"location",
+						component_separators = "",
+						padding = { left = 0, right = 1 },
+					},
+					{
+						"selectioncount",
+						component_separators = "",
+						padding = { left = 1, right = 1 },
+					},
+				},
 			},
 			inactive_sections = {
 				lualine_a = {},
@@ -46,7 +58,7 @@ local M = {
 				lualine_c = {},
 				lualine_x = {},
 				lualine_y = {},
-				lualine_z = { location },
+				lualine_z = { "location" },
 			},
 			winbar = {
 				lualine_a = {},

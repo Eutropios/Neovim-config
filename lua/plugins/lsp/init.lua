@@ -27,7 +27,6 @@ return {
 				json = { "biomejs" },
 				json5 = { "biomejs" },
 				jsonc = { "biomejs" },
-				latex = { "vale" },
 				lua = { "selene" },
 				markdown = { "markdownlint" },
 				python = { "ruff", "mypy" },
@@ -84,6 +83,22 @@ return {
 					lspconfig.lua_ls.setup({
 						on_attach = lsp_utils.on_attach,
 						capabilities = lsp_utils.capabilities,
+						settings = {
+							Lua = {
+								runtime = {
+									-- Tell the language server which version of Lua you're using
+									-- (most likely LuaJIT in the case of Neovim)
+									version = "LuaJIT",
+								},
+								-- Make the server aware of Neovim runtime files
+								workspace = {
+									checkThirdParty = false,
+									library = {
+										vim.env.VIMRUNTIME,
+									},
+								},
+							},
+						},
 					})
 				end,
 				["rust_analyzer"] = function()
@@ -103,6 +118,16 @@ return {
 									enable = true,
 								},
 							},
+						},
+					})
+				end,
+				["typst_lsp"] = function()
+					lspconfig.typst_lsp.setup({
+						on_attach = lsp_utils.on_attach,
+						capabilities = lsp_utils.capabilities,
+						filetypes = { "typst" },
+						settings = {
+							exportPdf = "onSave",
 						},
 					})
 				end,
@@ -172,6 +197,7 @@ return {
 					javascript = { { "biome", "prettier" } },
 					json = { { "biome", "prettier" } },
 					jsonc = { { "biome", "prettier" } },
+					latex = { "latexindent" },
 					lua = { "stylua" },
 					luadoc = { "stylua" },
 					markdown = { "markdownlint" },
