@@ -27,6 +27,7 @@ local lang_settings = {
 	rst = { shift_tab = 3, ruler_column = 80 },
 	toml = { ruler_column = 99 },
 	typescript = { ruler_column = 100 },
+	typst = { shift_tab = 2, ruler_column = 80 },
 	yaml = { shift_tab = 2, ruler_column = 80 },
 }
 

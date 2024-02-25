@@ -4,7 +4,7 @@ local M = {
 	event = "BufReadPre",
 	opts = {
 		indent = {
-			char = "▏",
+			char = " ",
 			tab_char = "▏",
 		},
 		whitespace = {

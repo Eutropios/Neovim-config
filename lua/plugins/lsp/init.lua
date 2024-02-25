@@ -19,8 +19,6 @@ return {
 			local lsp_utils = require("plugins.lsp.lsp-utils")
 			require("lint").linters_by_ft = {
 				bash = { "shellcheck" },
-				biblatex = { "vale" },
-				bibtex = { "vale" },
 				css = { "stylelint" },
 				gitcommit = { "gitlint" },
 				javascript = { "biomejs" },
@@ -34,7 +32,6 @@ return {
 				sass = { "stylelint" },
 				scss = { "stylelint" },
 				sh = { "shellcheck" },
-				tex = { "vale" },
 				txt = { "vale" },
 				typescript = { "biomejs" },
 				zsh = { "shellcheck" },

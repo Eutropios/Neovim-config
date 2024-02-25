@@ -35,6 +35,7 @@ local M = {
 			"csv",
 			"diff",
 			"doxygen",
+			"fennel",
 			"fish",
 			"git_config",
 			"git_rebase",
