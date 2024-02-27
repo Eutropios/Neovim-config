@@ -106,21 +106,6 @@ M.setup = function()
 		vim.lsp.buf.code_action,
 		vim.tbl_extend("error", bufopts, { desc = "Code Action" })
 	)
-
-	-- show diagnostics in hover window
-	vim.api.nvim_create_autocmd("CursorHold", {
-		callback = function()
-			local opts = {
-				border = "rounded",
-				close_events = { "BufLeave", "CursorMoved", "InsertEnter" },
-				focusable = false,
-				prefix = " ",
-				scope = "cursor",
-				source = "always",
-			}
-			vim.diagnostic.open_float(nil, opts)
-		end,
-	})
 end
 
 -- pulled from NavePnow dotfiles

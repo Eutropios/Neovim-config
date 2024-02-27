@@ -157,6 +157,42 @@ vim.keymap.set(
 )
 
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git, { desc = "Git" })
+vim.keymap.set(
+	{ "n" },
+	"<leader>iv",
+	"<cmd>:wincmd s<cr>",
+	{ desc = "Split vertically" }
+)
+vim.keymap.set(
+	{ "n" },
+	"<leader>ih",
+	"<cmd>:wincmd v<cr>",
+	{ desc = "Split horizontally" }
+)
+vim.keymap.set(
+	{ "n" },
+	"<leader>id",
+	"<cmd>:wincmd j<cr>",
+	{ desc = "Move to lower buffer" }
+)
+vim.keymap.set(
+	{ "n" },
+	"<leader>ir",
+	"<cmd>:wincmd l<cr>",
+	{ desc = "Move to right buffer" }
+)
+vim.keymap.set(
+	{ "n" },
+	"<leader>il",
+	"<cmd>:wincmd h<cr>",
+	{ desc = "Move to left buffer" }
+)
+vim.keymap.set(
+	{ "n" },
+	"<leader>iu",
+	"<cmd>:wincmd k<cr>",
+	{ desc = "Move to above buffer" }
+)
 
 -- which-key stuff
 local wk = require("which-key")
@@ -164,6 +200,7 @@ wk.register({
 	["<leader>"] = {
 		{ name = "Leader Commands" }, -- naming the leader Commands
 		h = { name = "Harpoon" },
+		i = { name = "Split windows" },
 		l = { "<cmd>Lazy<cr>", "Open Lazy" },
 		p = { name = "Telescope" },
 		r = { name = "Neotest" },
