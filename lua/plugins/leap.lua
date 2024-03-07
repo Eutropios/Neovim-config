@@ -1,14 +1,17 @@
 local M = {
 	"ggandor/leap.nvim",
-	event = "VeryLazy",
-	config = function(_, opts)
+	lazy = false,
+	keys = {
+		{ "s", mode = { "n", "x", "o" }, desc = "Leap forward to" },
+		{ "S", mode = { "n", "x", "o" }, desc = "Leap backward to" },
+	},
+	config = function()
 		local leap = require("leap")
-		vim.keymap.set("n", "s", function()
-			local focusable_windows_on_tabpage = vim.tbl_filter(function(win)
-				return vim.api.nvim_win_get_config(win).focusable
-			end, vim.api.nvim_tabpage_list_wins(0))
-			leap.leap({ target_windows = focusable_windows_on_tabpage })
-		end, { desc = "Leap prefix" })
+		leap.add_default_mappings()
+		leap.add_repeat_mappings("g;", "g,", {
+			relative_directions = true,
+			modes = { "n", "x", "o" },
+		})
 	end,
 }
 

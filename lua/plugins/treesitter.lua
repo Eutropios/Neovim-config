@@ -8,7 +8,7 @@ local M = {
 	opts = {
 		highlight = {
 			enable = true,
-			disable = function(lang, buf)
+			disable = function(_, buf)
 				local max_filesize = 200 * 1024 -- 100 KB
 				local ok, stats =
 					pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
@@ -43,6 +43,8 @@ local M = {
 			"gitcommit",
 			"gitignore",
 			"go",
+			"gomod",
+			"gpg",
 			"html",
 			"htmldjango",
 			"http",
@@ -52,6 +54,7 @@ local M = {
 			"json",
 			"json5",
 			"jsonc",
+			"jq",
 			"latex",
 			"llvm",
 			"lua",
@@ -64,6 +67,7 @@ local M = {
 			"pem",
 			"perl",
 			"php",
+			"phpdoc",
 			"psv",
 			"pymanifest",
 			"python",
@@ -71,12 +75,14 @@ local M = {
 			"regex",
 			"requirements",
 			"rst",
+			"ruby",
 			"rust",
 			"scss",
 			"ssh_config",
 			"svelte",
 			"teal",
 			"textproto",
+			"tmux",
 			"todotxt",
 			"toml",
 			"tsv",
@@ -87,6 +93,7 @@ local M = {
 			"vimdoc",
 			"xml",
 			"yaml",
+			"zathurarc",
 			"zig",
 		},
 		sync_install = false,

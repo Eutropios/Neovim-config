@@ -11,7 +11,7 @@ local M = {
 		{
 			"<leader>to",
 			"<cmd>lua require('trouble').open()<cr>",
-			desc = "open",
+			desc = "Open diagnostics panel",
 		},
 		{
 			"<leader>tw",
@@ -21,7 +21,7 @@ local M = {
 		{
 			"<leader>td",
 			"<cmd>lua require('trouble').open('document_diagnostics')<cr>",
-			desc = "document diagnostics",
+			desc = "Toggle diagnostic symbols",
 		},
 		{
 			"<leader>tq",

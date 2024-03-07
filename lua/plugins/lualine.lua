@@ -1,5 +1,9 @@
 local M = {
 	"nvim-lualine/lualine.nvim",
+	dependencies = {
+		"nvim-tree/nvim-web-devicons",
+		opt = false,
+	},
 	lazy = false,
 	opts = function()
 		local function diff_source()
@@ -37,7 +41,11 @@ local M = {
 						cond = require("lazy.status").has_updates,
 					},
 				},
-				lualine_x = { "filesize", "encoding", "filetype" },
+				lualine_x = {
+					"filesize",
+					"encoding",
+					{ "filetype", icons_enabled = true },
+				},
 				lualine_y = { "progress" },
 				lualine_z = {
 					{
