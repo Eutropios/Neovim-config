@@ -7,6 +7,7 @@ return {
 			"mfussenegger/nvim-lint", -- maps to "lint" in require
 			"williamboman/mason-lspconfig.nvim",
 			{ "folke/neodev.nvim", opts = {} },
+			{ "j-hui/fidget.nvim", opts = {} },
 		},
 		config = function(_, _)
 			require("neodev").setup({
