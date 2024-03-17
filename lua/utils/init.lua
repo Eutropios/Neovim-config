@@ -57,12 +57,15 @@ M.mason_packages = {
 	"clang-format",
 	"clangd",
 	"cmakelang",
+	"css-lsp",
 	"docformatter",
 	"gitlint",
 	"gopls",
+	"html-lsp",
 	"lua-language-server",
 	"markdownlint",
 	"marksman",
+	"markuplint",
 	"prettier",
 	"pyright",
 	"ruff-lsp",
@@ -79,6 +82,7 @@ M.mason_packages = {
 	"vim-language-server",
 	"yaml-language-server",
 	"yamlfmt",
+	"yamllint",
 }
 
 M.lsp_servers = {
@@ -86,7 +90,9 @@ M.lsp_servers = {
 	"bashls",
 	"biome",
 	"clangd",
+	"cssls",
 	"gopls",
+	"html",
 	"lua_ls",
 	"marksman",
 	"pyright",

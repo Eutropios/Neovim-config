@@ -20,19 +20,25 @@ return {
 			local lsp_utils = require("plugins.lsp.lsp-utils")
 			require("lint").linters_by_ft = {
 				bash = { "shellcheck" },
+				c = { "cpplint" },
+				cmake = { "cpplint" },
+				cpp = { "cpplint" },
 				css = { "stylelint" },
 				gitcommit = { "gitlint" },
+				html = { "markuplint" },
 				javascript = { "biomejs" },
 				json = { "biomejs" },
-				json5 = { "biomejs" },
 				jsonc = { "biomejs" },
 				lua = { "selene" },
+				luadoc = { "stylua" },
 				markdown = { "markdownlint" },
 				python = { "ruff", "mypy" },
 				sass = { "stylelint" },
 				scss = { "stylelint" },
 				sh = { "shellcheck" },
+				toml = { "taplo" },
 				typescript = { "biomejs" },
+				yaml = { "yamllint" },
 				zsh = { "shellcheck" },
 			}
 
@@ -212,6 +218,14 @@ return {
 					timeout_ms = 500,
 				},
 			})
+			require("conform").formatters.shfmt = {
+				prepend_args = {
+					"--simplify",
+					"-i",
+					"4",
+					"-ci",
+				},
+			}
 			require("conform").formatters.taplo = {
 				inherit = false,
 				command = "taplo",
