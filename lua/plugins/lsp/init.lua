@@ -39,7 +39,6 @@ return {
 				toml = { "taplo" },
 				typescript = { "biomejs" },
 				yaml = { "yamllint" },
-				zsh = { "shellcheck" },
 			}
 
 			lsp_utils.setup()

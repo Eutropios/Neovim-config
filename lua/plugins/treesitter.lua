@@ -3,7 +3,9 @@ local M = {
 	build = ":TSUpdate",
 	event = "BufReadPost",
 	dependencies = {
+		"nvim-treesitter/nvim-treesitter-context",
 		"nvim-treesitter/nvim-treesitter-refactor",
+		"windwp/nvim-ts-autotag",
 	},
 	opts = {
 		highlight = {

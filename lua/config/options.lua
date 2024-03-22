@@ -47,6 +47,7 @@ vim.opt.fillchars = {
 	eob = " ",
 }
 vim.opt.mousemoveevent = true
+vim.opt.cursorline = true
 
 -- command completion
 vim.opt.wildmode = "longest:full:full"
