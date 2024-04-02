@@ -1,4 +1,4 @@
-local M = {
+return {
 	"ggandor/leap.nvim",
 	lazy = false,
 	keys = {
@@ -14,5 +14,3 @@ local M = {
 		})
 	end,
 }
-
-return M

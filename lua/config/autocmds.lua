@@ -30,7 +30,7 @@ local lang_settings = {
 	markdown = { shift_tab = 2, ruler_column = 80 },
 	python = { ruler_column = 88 },
 	rst = { shift_tab = 3, ruler_column = 80 },
-	toml = { shift_tab = 2, ruler_column = 99 },
+	toml = { shift_tab = 4, ruler_column = 99 },
 	typescript = { ruler_column = 100 },
 	typst = { shift_tab = 2, ruler_column = 80 },
 	yaml = { shift_tab = 2, ruler_column = 80 },

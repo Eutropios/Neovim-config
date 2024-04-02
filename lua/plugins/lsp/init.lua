@@ -36,7 +36,6 @@ return {
 				sass = { "stylelint" },
 				scss = { "stylelint" },
 				sh = { "shellcheck" },
-				toml = { "taplo" },
 				typescript = { "biomejs" },
 				yaml = { "yamllint" },
 			}
@@ -189,9 +188,9 @@ return {
 				formatters_by_ft = {
 					["*"] = { "trim_whitespace", "trim_newlines" },
 					bash = { "shfmt" },
-					c = { "clang_format" },
+					c = { "clang-format" },
 					cmake = { "cmake_format" },
-					cpp = { "clang_format" },
+					cpp = { "clang-format" },
 					css = { "stylelint" },
 					go = { "gofmt" },
 					html = { "prettier" },
@@ -225,6 +224,12 @@ return {
 					"-ci",
 				},
 			}
+			require("conform").formatters.clang_format = {
+				prepend_args = {
+					"--style",
+					"{BasedOnStyle: Google, IndentWidth: 4}",
+				},
+			}
 			require("conform").formatters.taplo = {
 				inherit = false,
 				command = "taplo",
@@ -250,6 +255,8 @@ return {
 					"compact_inline_tables=true",
 					"--option",
 					"indent_entries=true",
+					"--option",
+					"indent_string=    ",
 					"--option",
 					"indent_tables=true",
 					"--option",

@@ -1,4 +1,4 @@
-local M = {
+return {
 	"ThePrimeagen/harpoon",
 	keys = {
 		{
@@ -43,5 +43,3 @@ local M = {
 		},
 	},
 }
-
-return M

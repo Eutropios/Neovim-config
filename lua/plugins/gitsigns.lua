@@ -28,7 +28,6 @@ local M = {
 		update_debounce = 100,
 		watch_gitdir = { interval = 1000, follow_files = true },
 		word_diff = false, -- Toggle with `:Gitsigns toggle_word_diff`
-		yadm = { enable = false },
 	},
 }
 
