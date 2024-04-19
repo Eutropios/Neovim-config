@@ -35,7 +35,6 @@ return {
 				python = { "ruff", "mypy" },
 				sass = { "stylelint" },
 				scss = { "stylelint" },
-				sh = { "shellcheck" },
 				typescript = { "biomejs" },
 				yaml = { "yamllint" },
 			}
@@ -59,7 +58,7 @@ return {
 						settings = {
 							python = {
 								analysis = {
-									typeCheckingMode = "on",
+									typeCheckingMode = "strict",
 								},
 							},
 						},
@@ -226,8 +225,8 @@ return {
 			}
 			require("conform").formatters.clang_format = {
 				prepend_args = {
-					"--style",
-					"{BasedOnStyle: Google, IndentWidth: 4}",
+					"-style",
+					"{BasedOnStyle: Google, IndentWidth: 4, TabWidth: 4}",
 				},
 			}
 			require("conform").formatters.taplo = {

@@ -57,6 +57,7 @@ M.mason_packages = {
 	"clang-format",
 	"clangd",
 	"cmakelang",
+	"cpplint",
 	"css-lsp",
 	"djlint",
 	"docformatter",
