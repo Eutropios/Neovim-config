@@ -32,7 +32,7 @@ return {
 				lua = { "selene" },
 				luadoc = { "stylua" },
 				markdown = { "markdownlint" },
-				python = { "ruff", "mypy" },
+				python = { "mypy" },
 				sass = { "stylelint" },
 				scss = { "stylelint" },
 				typescript = { "biomejs" },
@@ -64,8 +64,8 @@ return {
 						},
 					})
 				end,
-				["ruff_lsp"] = function()
-					lspconfig.ruff_lsp.setup({
+				["ruff"] = function()
+					lspconfig.ruff.setup({
 						on_attach = lsp_utils.on_attach,
 						capabilities = lsp_utils.capabilities,
 					})
