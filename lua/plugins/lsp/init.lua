@@ -29,12 +29,14 @@ return {
 				javascript = { "biomejs" },
 				json = { "biomejs" },
 				jsonc = { "biomejs" },
+				jsx = { "biomejs" },
 				lua = { "selene" },
 				luadoc = { "stylua" },
 				markdown = { "markdownlint" },
 				python = { "mypy" },
 				sass = { "stylelint" },
 				scss = { "stylelint" },
+				tsx = { "biomejs" },
 				typescript = { "biomejs" },
 				yaml = { "yamllint" },
 			}
@@ -157,6 +159,7 @@ return {
 				width = 0.95,
 				height = 0.86,
 			},
+			PATH = "append",
 		},
 		config = function(_, opts)
 			require("mason").setup(opts)
@@ -196,6 +199,7 @@ return {
 					javascript = { { "biome", "prettier" } },
 					json = { { "biome", "prettier" } },
 					jsonc = { { "biome", "prettier" } },
+					jsx = { "biome" },
 					latex = { "latexindent" },
 					lua = { "stylua" },
 					luadoc = { "stylua" },
@@ -206,6 +210,7 @@ return {
 					scss = { "stylelint" },
 					sh = { "shfmt" },
 					toml = { "taplo" },
+					tsx = { "biome" },
 					typescript = { { "biome", "prettier" } },
 					yaml = { "yamlfmt" },
 					zsh = { "shfmt" },

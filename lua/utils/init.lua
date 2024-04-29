@@ -100,6 +100,7 @@ M.lsp_servers = {
 	"jinja_lsp",
 	"lua_ls",
 	"marksman",
+	"perlnavigator",
 	"pyright",
 	"ruff",
 	"rust_analyzer",
