@@ -6,6 +6,7 @@ local M = {
 			require("luasnip.loaders.from_vscode").lazy_load()
 		end,
 	},
+	build = "make install_jsregexp",
 	config = true,
 }
 
