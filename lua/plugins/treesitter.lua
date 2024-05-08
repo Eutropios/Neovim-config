@@ -69,6 +69,7 @@ local M = {
 			"json5",
 			"jsonc",
 			"jq",
+			"kdl",
 			"latex",
 			"linkerscript",
 			"llvm",
