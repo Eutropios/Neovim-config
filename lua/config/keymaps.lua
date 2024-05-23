@@ -45,6 +45,7 @@ vim.keymap.set("n", "<esc>", "<cmd>noh<cr>", { desc = "Clear search results" })
 -- Better indenting
 vim.keymap.set("v", "<", "<gv", { desc = "Unindent" })
 vim.keymap.set("v", ">", ">gv", { desc = "Indent" })
+vim.keymap.set("i", "<S-Tab>", "<Esc><<_i", { desc = "Unindent insert mode" })
 
 -- Paste without replace clipboard
 vim.keymap.set("v", "p", '"_dP', { desc = "Paste without replace" })
@@ -159,37 +160,37 @@ vim.keymap.set(
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git, { desc = "Git" })
 vim.keymap.set(
 	{ "n" },
-	"<leader>iv",
+	"<leader>ii",
 	"<cmd>:wincmd s<cr>",
 	{ desc = "Split vertically" }
 )
 vim.keymap.set(
 	{ "n" },
-	"<leader>ih",
+	"<leader>iu",
 	"<cmd>:wincmd v<cr>",
 	{ desc = "Split horizontally" }
 )
 vim.keymap.set(
 	{ "n" },
-	"<leader>id",
+	"<leader>ij",
 	"<cmd>:wincmd j<cr>",
 	{ desc = "Move to lower buffer" }
 )
 vim.keymap.set(
 	{ "n" },
-	"<leader>ir",
+	"<leader>il",
 	"<cmd>:wincmd l<cr>",
 	{ desc = "Move to right buffer" }
 )
 vim.keymap.set(
 	{ "n" },
-	"<leader>il",
+	"<leader>ih",
 	"<cmd>:wincmd h<cr>",
 	{ desc = "Move to left buffer" }
 )
 vim.keymap.set(
 	{ "n" },
-	"<leader>iu",
+	"<leader>ik",
 	"<cmd>:wincmd k<cr>",
 	{ desc = "Move to above buffer" }
 )
