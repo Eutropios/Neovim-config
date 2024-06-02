@@ -13,4 +13,8 @@ return {
 		cmd = "Play2048",
 		config = true,
 	},
+	{
+		"folke/lazydev.nvim",
+		ft = "lua", -- only load on lua files
+	},
 }

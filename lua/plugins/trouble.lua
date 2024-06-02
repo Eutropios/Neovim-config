@@ -9,12 +9,12 @@ local M = {
 	},
 	keys = {
 		{
-			"<leader>tx",
+			"<leader>to",
 			"<cmd>Trouble diagnostics toggle<cr>",
 			desc = "Diagnostics (Trouble)",
 		},
 		{
-			"<leader>tX",
+			"<leader>tx",
 			"<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
 			desc = "Buffer Diagnostics (Trouble)",
 		},

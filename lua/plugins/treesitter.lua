@@ -5,7 +5,26 @@ local M = {
 	dependencies = {
 		"nvim-treesitter/nvim-treesitter-context",
 		"nvim-treesitter/nvim-treesitter-refactor",
-		"windwp/nvim-ts-autotag",
+		{
+			"windwp/nvim-ts-autotag",
+			ft = {
+				"astro",
+				"glimmer",
+				"handlebars",
+				"html",
+				"javascript",
+				"jsx",
+				"markdown",
+				"php",
+				"rescript",
+				"svelte",
+				"tsx",
+				"twig",
+				"typescript",
+				"vue",
+				"xml",
+			},
+		},
 	},
 	opts = {
 		highlight = {
