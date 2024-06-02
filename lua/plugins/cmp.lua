@@ -18,7 +18,7 @@ local M = {
 			{ link = "Comment", default = true }
 		)
 		local cmp = require("cmp")
-		local lsp_kinds = require("utils").lsp_kinds
+		local lsp_kinds = require("utilities").lsp_kinds
 		local defaults = require("cmp.config.default")()
 		local luasnip = require("luasnip")
 		local has_words_before = function()

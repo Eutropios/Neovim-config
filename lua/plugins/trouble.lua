@@ -9,34 +9,34 @@ local M = {
 	},
 	keys = {
 		{
-			"<leader>to",
-			"<cmd>lua require('trouble').open()<cr>",
-			desc = "Open diagnostics panel",
+			"<leader>tx",
+			"<cmd>Trouble diagnostics toggle<cr>",
+			desc = "Diagnostics (Trouble)",
 		},
 		{
-			"<leader>tw",
-			"<cmd>lua require('trouble').open('workspace_diagnostics')<cr>",
-			desc = "workspace diagnostics",
+			"<leader>tX",
+			"<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
+			desc = "Buffer Diagnostics (Trouble)",
 		},
 		{
-			"<leader>td",
-			"<cmd>lua require('trouble').open('document_diagnostics')<cr>",
-			desc = "Toggle diagnostic symbols",
-		},
-		{
-			"<leader>tq",
-			"<cmd>lua require('trouble').open('quickfix')<cr>",
-			desc = "quickfix",
+			"<leader>ts",
+			"<cmd>Trouble symbols toggle focus=false<cr>",
+			desc = "Symbols (Trouble)",
 		},
 		{
 			"<leader>tl",
-			"<cmd>lua require('trouble').open('loclist')<cr>",
-			desc = "loclist",
+			"<cmd>Trouble lsp toggle focus=false win.position=right<cr>",
+			desc = "LSP Definitions / references / ... (Trouble)",
 		},
 		{
-			"<leader>tr",
-			"<cmd>lua require('trouble').open('lsp_references')<cr>",
-			desc = "lsp references",
+			"<leader>tL",
+			"<cmd>Trouble loclist toggle<cr>",
+			desc = "Location List (Trouble)",
+		},
+		{
+			"<leader>tQ",
+			"<cmd>Trouble qflist toggle<cr>",
+			desc = "Quickfix List (Trouble)",
 		},
 	},
 }

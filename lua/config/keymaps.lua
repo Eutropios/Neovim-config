@@ -1,4 +1,4 @@
-local utils = require("utils")
+local utils = require("utilities")
 
 -- Remap command key
 vim.keymap.set("n", "<C-p>", ":", { desc = "Command Mode" })

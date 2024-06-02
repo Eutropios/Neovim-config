@@ -6,14 +6,10 @@ return {
 			"hrsh7th/cmp-nvim-lsp",
 			"mfussenegger/nvim-lint", -- maps to "lint" in require
 			"williamboman/mason-lspconfig.nvim",
-			{ "folke/neodev.nvim", opts = {} },
 			{ "j-hui/fidget.nvim", opts = {} },
 		},
 		config = function(_, _)
-			require("neodev").setup({
-				-- add any options here, or leave empty to use the default settings
-			})
-			local utils = require("utils")
+			local utils = require("utilities")
 			local mason_lspconfig = require("mason-lspconfig")
 			local lspconfig = require("lspconfig")
 			local lspconfig_utils = require("lspconfig/util")
@@ -163,7 +159,7 @@ return {
 		},
 		config = function(_, opts)
 			require("mason").setup(opts)
-			local utils = require("utils")
+			local utils = require("utilities")
 			local mr = require("mason-registry")
 			local packages = utils.mason_packages
 			local function ensure_installed()
@@ -190,9 +186,7 @@ return {
 				formatters_by_ft = {
 					["*"] = { "trim_whitespace", "trim_newlines" },
 					bash = { "shfmt" },
-					c = { "clang-format" },
 					cmake = { "cmake_format" },
-					cpp = { "clang-format" },
 					css = { "stylelint" },
 					go = { "gofmt" },
 					html = { "prettier" },
@@ -226,12 +220,6 @@ return {
 					"-i",
 					"4",
 					"-ci",
-				},
-			}
-			require("conform").formatters.clang_format = {
-				prepend_args = {
-					"-style",
-					"{BasedOnStyle: Google, IndentWidth: 4, TabWidth: 4}",
 				},
 			}
 			require("conform").formatters.taplo = {

@@ -97,6 +97,7 @@ M.lsp_servers = {
 	"esbonio",
 	"gopls",
 	"html",
+	"htmx",
 	"jinja_lsp",
 	"lua_ls",
 	"marksman",
