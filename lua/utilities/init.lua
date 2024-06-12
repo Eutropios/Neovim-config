@@ -98,6 +98,7 @@ M.lsp_servers = {
 	"html",
 	"htmx",
 	"jinja_lsp",
+	"jqls",
 	"lua_ls",
 	"marksman",
 	"perlnavigator",

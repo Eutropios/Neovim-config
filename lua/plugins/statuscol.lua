@@ -1,12 +1,9 @@
 local M = {
 	"luukvbaal/statuscol.nvim",
 	event = "VeryLazy",
-	opts = function()
+	config = function()
 		local builtin = require("statuscol.builtin")
-		return {
-			setopt = true,
-			-- order = "NSFs",
-			-- Number Sign Fold sep
+		require("statuscol").setup({
 			segments = {
 				{
 					click = "v:lua.ScLa",
@@ -24,7 +21,7 @@ local M = {
 					click = "v:lua.ScSa",
 					sign = {
 						maxwidth = 1,
-						name = { "Diagnostic" },
+						namespace = { "diagnostic/signs" },
 					},
 				},
 				{
@@ -33,7 +30,8 @@ local M = {
 					text = { " ", builtin.foldfunc, " " },
 				},
 			},
-		}
+		})
 	end,
 }
+
 return M

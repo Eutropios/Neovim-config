@@ -188,6 +188,7 @@ return {
 					bash = { "shfmt" },
 					cmake = { "cmake_format" },
 					css = { "stylelint" },
+					django = { "djlint" },
 					go = { "gofmt" },
 					html = { "prettier" },
 					javascript = { { "biome", "prettier" } },
