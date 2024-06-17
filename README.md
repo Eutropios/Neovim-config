@@ -6,6 +6,8 @@ This exists to keep my config safe in case something goes bonkers.
 This config uses Lazy.nvim as its package installer, and a colour scheme similar
 to VSCode's Default Dark+ theme.  
 
+Neovim version >= 0.10.0 required.  
+
 Package Manager: [Lazy.nvim](https://github.com/folke/lazy.nvim)  
 Colourscheme: [vscode.nvim](https://github.com/Mofiqul/vscode.nvim)  
 Prerequisites to be installed via your Linux distribution's package manager:
