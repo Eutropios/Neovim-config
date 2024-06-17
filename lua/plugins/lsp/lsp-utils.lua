@@ -16,7 +16,7 @@ M.setup = function()
 			focusable = false,
 			header = "",
 			prefix = "",
-			source = "always",
+			source = "if_many",
 			style = "minimal",
 		},
 		signs = true,
@@ -111,7 +111,11 @@ end
 -- pulled from NavePnow dotfiles
 M.on_attach = function(client, bufnr)
 	-- Enable completion triggered by <c-x><c-o>
-	vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
+	vim.api.nvim_set_option_value(
+		"omnifunc",
+		"v:lua.vim.lsp.omnifunc",
+		{ buf = bufnr }
+	)
 end
 
 return M
