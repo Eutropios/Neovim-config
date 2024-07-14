@@ -197,18 +197,16 @@ vim.keymap.set(
 
 -- which-key stuff
 local wk = require("which-key")
-wk.register({
-	["<leader>"] = {
-		{ name = "Leader Commands" }, -- naming the leader Commands
-		h = { name = "Harpoon" },
-		i = { name = "Split windows" },
-		l = { "<cmd>Lazy<cr>", "Open Lazy" },
-		p = { name = "Telescope" },
-		r = { name = "Neotest" },
-		s = { name = "Spectre Find/Replace" },
-		t = { name = "Trouble" },
-		u = { name = "Undotree" },
-		v = { name = "LSP and Mason" },
-		w = { name = "Workspace" },
-	},
+wk.add({
+	{ "<leader>", group = "Leader Commands" }, -- naming the leader Commands
+	{ "<leader>h", group = "Harpoon" },
+	{ "<leader>i", group = "Split windows" },
+	{ "<leader>l", "<cmd>Lazy<cr>", desc = "Open Lazy" },
+	{ "<leader>p", group = "Telescope" },
+	{ "<leader>r", group = "Neotest" },
+	{ "<leader>s", group = "Spectre Find/Replace" },
+	{ "<leader>t", group = "Trouble" },
+	{ "<leader>u", group = "Undotree" },
+	{ "<leader>v", group = "LSP and Mason" },
+	{ "<leader>w", group = "Workspace" },
 })

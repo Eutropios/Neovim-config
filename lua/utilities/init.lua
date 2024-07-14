@@ -75,6 +75,7 @@ M.mason_packages = {
 	"selene",
 	"shellcheck",
 	"shfmt",
+	"sqlfluff",
 	"stylelint",
 	"stylua",
 	"taplo",

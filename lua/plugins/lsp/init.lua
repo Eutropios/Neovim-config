@@ -32,6 +32,7 @@ return {
 				python = { "mypy" },
 				sass = { "stylelint" },
 				scss = { "stylelint" },
+				sql = { "sqlfluff" },
 				tsx = { "biomejs" },
 				typescript = { "biomejs" },
 				yaml = { "yamllint" },
