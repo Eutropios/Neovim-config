@@ -16,9 +16,9 @@ return {
 			local lsp_utils = require("plugins.lsp.lsp-utils")
 			require("lint").linters_by_ft = {
 				bash = { "shellcheck" },
-				c = { "cpplint" },
+				c = { "cppcheck", "cpplint" },
 				cmake = { "cpplint" },
-				cpp = { "cpplint" },
+				cpp = { "cppcheck", "cpplint" },
 				css = { "stylelint" },
 				gitcommit = { "gitlint" },
 				html = { "markuplint" },
