@@ -185,7 +185,7 @@ return {
 		config = function()
 			require("conform").setup({
 				formatters_by_ft = {
-					["*"] = { "trim_whitespace", "trim_newlines" },
+					["*"] = { "trim_whitespace" },
 					bash = { "shfmt" },
 					cmake = { "cmake_format" },
 					css = { "stylelint" },
