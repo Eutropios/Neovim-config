@@ -47,7 +47,7 @@ local M = {
 					args = { "--log-level", "DEBUG" },
 					-- Runner to use. Will use pytest if available by default.
 					-- Can be a function to return dynamic value.
-					runner = "unittest",
+					runner = "pytest",
 				}),
 				require("neotest-gtest").setup({}),
 				require("neotest-zig")({

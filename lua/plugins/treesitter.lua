@@ -83,6 +83,7 @@ local M = {
 			"go",
 			"gomod",
 			"gpg",
+			"haskell",
 			"html",
 			"htmldjango",
 			"http",
