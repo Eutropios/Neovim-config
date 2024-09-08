@@ -1,15 +1,15 @@
 # Neovim-config
 
-My current NeoVim config. Nothing more, nothing less.  
-This exists to keep my config safe in case something goes bonkers.  
+My current NeoVim config. Nothing more, nothing less.
+This exists to keep my config safe in case something goes bonkers.
 
 This config uses Lazy.nvim as its package installer, and a colour scheme similar
-to VSCode's Default Dark+ theme.  
+to VSCode's Default Dark+ theme.
 
-Neovim version >= 0.10.0 required.  
+Neovim version >= 0.10.0 required.
 
-Package Manager: [Lazy.nvim](https://github.com/folke/lazy.nvim)  
-Colourscheme: [vscode.nvim](https://github.com/Mofiqul/vscode.nvim)  
+Package Manager: [Lazy.nvim](https://github.com/folke/lazy.nvim)
+Colourscheme: [vscode.nvim](https://github.com/Mofiqul/vscode.nvim)
 Prerequisites to be installed via your Linux distribution's package manager:
 
 * [fd](https://github.com/sharkdp/fd)

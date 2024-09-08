@@ -51,6 +51,7 @@ M.lsp_kinds = {
 }
 
 M.mason_packages = {
+	"asmfmt",
 	"awk-language-server",
 	"bash-language-server",
 	"biome",
@@ -92,6 +93,7 @@ M.mason_packages = {
 }
 
 M.lsp_servers = {
+	"asm_lsp",
 	"awk_ls",
 	"bashls",
 	"biome",
@@ -104,6 +106,7 @@ M.lsp_servers = {
 	"htmx",
 	"jinja_lsp",
 	"jqls",
+	"julials",
 	"lua_ls",
 	"marksman",
 	"perlnavigator",

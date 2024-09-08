@@ -99,6 +99,12 @@ return {
 						},
 					})
 				end,
+				["teal_ls"] = function()
+					lspconfig.lua_ls.setup({
+						on_attach = lsp_utils.on_attach,
+						capabilities = lsp_utils.capabilities,
+					})
+				end,
 				["rust_analyzer"] = function()
 					lspconfig.rust_analyzer.setup({
 						on_attach = lsp_utils.on_attach,
@@ -196,7 +202,6 @@ return {
 					json = { { "biome", "prettier" } },
 					jsonc = { { "biome", "prettier" } },
 					jsx = { "biome" },
-					latex = { "latexindent" },
 					lua = { "stylua" },
 					luadoc = { "stylua" },
 					markdown = { "markdownlint" },
