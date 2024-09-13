@@ -15,6 +15,7 @@ return {
 			local lspconfig_utils = require("lspconfig/util")
 			local lsp_utils = require("plugins.lsp.lsp-utils")
 			require("lint").linters_by_ft = {
+				awk = { "awk" },
 				bash = { "shellcheck" },
 				c = { "cppcheck", "cpplint" },
 				cmake = { "cpplint" },
@@ -42,7 +43,6 @@ return {
 			mason_lspconfig.setup({
 				ensure_installed = utils.lsp_servers,
 			})
-
 			mason_lspconfig.setup_handlers({
 				function(server_name)
 					lspconfig[server_name].setup({

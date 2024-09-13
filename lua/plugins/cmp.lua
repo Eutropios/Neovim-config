@@ -3,7 +3,6 @@ local M = {
 	version = false, -- last release is way too old
 	event = "BufReadPre",
 	dependencies = {
-		"hrsh7th/cmp-buffer",
 		"hrsh7th/cmp-calc",
 		"hrsh7th/cmp-nvim-lsp",
 		"hrsh7th/cmp-nvim-lsp-signature-help",
