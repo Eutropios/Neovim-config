@@ -84,12 +84,13 @@ M.mason_packages = {
 	"stylua",
 	"taplo",
 	"teal-language-server",
+	"tinymist",
 	"typescript-language-server",
-	"typst-lsp",
 	"vim-language-server",
 	"yaml-language-server",
 	"yamlfmt",
 	"yamllint",
+	"zls",
 }
 
 M.lsp_servers = {
@@ -115,10 +116,11 @@ M.lsp_servers = {
 	"rust_analyzer",
 	"taplo",
 	"teal_ls",
+	"tinymist",
 	"tsserver",
-	"typst_lsp",
 	"vimls",
 	"yamlls",
+	"zls",
 }
 
 function M.on_attach(on_attach)

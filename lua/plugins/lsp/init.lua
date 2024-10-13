@@ -213,6 +213,7 @@ return {
 					toml = { "taplo" },
 					tsx = { "biome" },
 					typescript = { { "biome", "prettier" } },
+					typst = { "typstyle" },
 					yaml = { "yamlfmt" },
 					zsh = { "shfmt" },
 				},
