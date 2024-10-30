@@ -112,6 +112,7 @@ local M = {
 			"perl",
 			"php",
 			"phpdoc",
+			"powershell",
 			"printf",
 			"psv",
 			"pymanifest",

@@ -117,7 +117,7 @@ M.lsp_servers = {
 	"taplo",
 	"teal_ls",
 	"tinymist",
-	"tsserver",
+	"ts_ls",
 	"vimls",
 	"yamlls",
 	"zls",
