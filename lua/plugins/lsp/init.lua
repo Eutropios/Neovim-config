@@ -20,7 +20,7 @@ return {
 				c = { "cppcheck", "cpplint" },
 				cmake = { "cpplint" },
 				cpp = { "cppcheck", "cpplint" },
-				css = { "stylelint" },
+				css = { "biomejs", "stylelint" },
 				gitcommit = { "gitlint" },
 				html = { "markuplint" },
 				javascript = { "biomejs" },
@@ -100,7 +100,7 @@ return {
 					})
 				end,
 				["teal_ls"] = function()
-					lspconfig.lua_ls.setup({
+					lspconfig.teal_ls.setup({
 						on_attach = lsp_utils.on_attach,
 						capabilities = lsp_utils.capabilities,
 					})
@@ -125,14 +125,11 @@ return {
 						},
 					})
 				end,
-				["typst_lsp"] = function()
-					lspconfig.typst_lsp.setup({
+				["tinymist"] = function()
+					lspconfig.tinymist.setup({
 						on_attach = lsp_utils.on_attach,
 						capabilities = lsp_utils.capabilities,
 						filetypes = { "typst" },
-						settings = {
-							exportPdf = "onSave",
-						},
 					})
 				end,
 			})
