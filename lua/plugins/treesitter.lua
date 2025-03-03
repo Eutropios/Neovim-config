@@ -58,6 +58,7 @@ local M = {
 			"ini",
 			"javascript",
 			"jinja",
+			"jinja_inline",
 			"jsdoc",
 			"json",
 			"json5",
