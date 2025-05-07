@@ -5,7 +5,7 @@ return {
 		dependencies = {
 			"hrsh7th/cmp-nvim-lsp",
 			"mfussenegger/nvim-lint", -- maps to "lint" in require
-			"williamboman/mason-lspconfig.nvim",
+			{"williamboman/mason-lspconfig.nvim", version="1.32.0"},
 			{ "j-hui/fidget.nvim", opts = {} },
 		},
 		config = function(_, _)
@@ -137,6 +137,7 @@ return {
 	},
 	{
 		"williamboman/mason.nvim",
+		version="1.11.0",
 		build = ":MasonUpdate",
 		keys = {
 			{
