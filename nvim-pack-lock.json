@@ -1,0 +1,44 @@
+{
+  "plugins": {
+    "blink.cmp": {
+      "rev": "d2c4d170ad51e5116da7b19f2426f3b6e318161d",
+      "src": "https://github.com/saghen/blink.cmp"
+    },
+    "blink.lib": {
+      "rev": "b127d48bf8e9ac9cf41f6e0fbead317503f76558",
+      "src": "https://github.com/saghen/blink.lib"
+    },
+    "blink.pairs": {
+      "rev": "436857a5c2558c8f66a61ce4745d1342789a4881",
+      "src": "https://github.com/saghen/blink.pairs"
+    },
+    "conform.nvim": {
+      "rev": "619363c30309d29ffa631e67c8183f2a72caa373",
+      "src": "https://github.com/stevearc/conform.nvim"
+    },
+    "mason.nvim": {
+      "rev": "bb639d4bf385a4d89f478b83af4d770be05ab7eb",
+      "src": "https://github.com/mason-org/mason.nvim"
+    },
+    "mini.completion": {
+      "rev": "04abe6fc7860858785ba63c435d76bf5b8b64b5f",
+      "src": "https://github.com/nvim-mini/mini.completion"
+    },
+    "mini.pairs": {
+      "rev": "30cf2f01c4aaa2033db67376b9924fa2442c05d6",
+      "src": "https://github.com/nvim-mini/mini.pairs"
+    },
+    "nvim-lspconfig": {
+      "rev": "6f76a3eeadc2ee235d74cd7d5319e95a261084af",
+      "src": "https://github.com/neovim/nvim-lspconfig"
+    },
+    "nvim-web-devicons": {
+      "rev": "dfbfaa967a6f7ec50789bead7ef87e336c1fa63c",
+      "src": "https://github.com/nvim-tree/nvim-web-devicons"
+    },
+    "vim-moonfly-colors": {
+      "rev": "1c0a9994bb6bb5b43859c67924aabd061c4b7905",
+      "src": "https://github.com/bluz71/vim-moonfly-colors"
+    }
+  }
+}

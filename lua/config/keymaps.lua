@@ -1,5 +1,3 @@
-local utils = require("utilities")
-
 -- Remap command key
 vim.keymap.set("n", "<C-p>", ":", { desc = "Command Mode" })
 vim.keymap.set("n", "<leader><leader>", ":", { desc = "Command Mode" })
@@ -109,46 +107,50 @@ vim.keymap.set(
 vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Move up 15 lines" })
 vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Move down 15 lines" })
 
--- toggle options
-vim.keymap.set("n", "<leader>tw", function()
-	utils.toggle("wrap")
-end, { desc = "Toggle Word Wrap" })
-vim.keymap.set("n", "<leader>ts", function()
-	utils.toggle("spell")
-end, { desc = "Toggle Spelling" })
-vim.keymap.set("n", "<leader>tl", function()
-	utils.toggle("relativenumber")
-end, { desc = "Toggle Line Numbers" })
-vim.keymap.set(
-	"n",
-	"<leader>td",
-	utils.toggle_diagnostics,
-	{ desc = "Toggle Diagnostics" }
-)
-vim.keymap.set(
-	"n",
-	"<leader>q",
-	utils.toggle_quickfix,
-	{ desc = "Toggle Quickfix Window" }
-)
-
 -- back to netrw
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, { desc = "Return to Netrw" })
 
-vim.keymap.set("n", "J", "mzJ`z")
-vim.keymap.set("n", "n", "nzzzv")
-vim.keymap.set("n", "N", "Nzzzv")
+vim.keymap.set("n", "J", "mzJ`z", { desc = "Join lines w/o moving cursor" })
+vim.keymap.set("n", "n", "nzzzv", { desc = "Next search result" })
+vim.keymap.set("n", "N", "Nzzzv", { desc = "Previous search result" })
 
 vim.keymap.set("n", "<leader>f", function()
 	vim.lsp.buf.format({ async = false })
 	vim.api.nvim_command("write")
 end, { desc = "Lsp formatting" })
 
-vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
-vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
-vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
-vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
-vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
+vim.keymap.set(
+	"n",
+	"<C-j>",
+	"<cmd>cprev<CR>zz",
+	{ desc = "Quick Fix previous" }
+)
+vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz", { desc = "Quick Fix next" })
+vim.keymap.set(
+	"n",
+	"<leader>j",
+	"<cmd>lprev<CR>zz",
+	{ desc = "Location Fix previous" }
+)
+vim.keymap.set(
+	"n",
+	"<leader>k",
+	"<cmd>lnext<CR>zz",
+	{ desc = "Location Fix next" }
+)
+
+vim.keymap.set(
+	"n",
+	"<leader>re",
+	"<cmd>restart<cr>",
+	{ desc = "Restart config :restart)" }
+)
+
+-- native undotree
+vim.keymap.set("n", "<leader>u", function()
+	vim.cmd.packadd("nvim.undotree")
+	require("undotree").open()
+end, { desc = "Toggle Builtin Undotree" })
 
 vim.keymap.set(
 	"n",
@@ -194,19 +196,3 @@ vim.keymap.set(
 	"<cmd>:wincmd k<cr>",
 	{ desc = "Move to above buffer" }
 )
-
--- which-key stuff
-local wk = require("which-key")
-wk.add({
-	{ "<leader>", group = "Leader Commands" }, -- naming the leader Commands
-	{ "<leader>h", group = "Harpoon" },
-	{ "<leader>i", group = "Split windows" },
-	{ "<leader>l", "<cmd>Lazy<cr>", desc = "Open Lazy" },
-	{ "<leader>p", group = "Telescope" },
-	{ "<leader>r", group = "Neotest" },
-	{ "<leader>s", group = "Spectre Find/Replace" },
-	{ "<leader>t", group = "Trouble" },
-	{ "<leader>u", group = "Undotree" },
-	{ "<leader>v", group = "LSP and Mason" },
-	{ "<leader>w", group = "Workspace" },
-})

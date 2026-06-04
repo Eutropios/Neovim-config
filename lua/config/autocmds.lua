@@ -1,3 +1,25 @@
+vim.api.nvim_create_user_command("PackAdd", function(opts)
+	vim.pack.add(opts.fargs)
+end, { nargs = "+", desc = "Add plugins (:PackAdd user/repo1 user/repo2)" })
+
+-- Pack Delete and Update cmds are built-in on Nightly 0.13
+vim.api.nvim_create_user_command("PackDel", function(opts)
+	vim.pack.del(opts.fargs)
+end, { nargs = "+", desc = "Delete plugins (:PackDel plugin1 plugin2)" })
+
+vim.api.nvim_create_user_command("PackUpdate", function(opts)
+	-- checks if any argument is passed
+	if opts.args:match("%S") then
+		-- update specific plugins
+		local plugins = vim.split(opts.args, "%s+", { trimempty = true })
+		-- update only specified plugins
+		vim.pack.update(plugins)
+	else
+		-- update all
+		vim.pack.update()
+	end
+end, { nargs = "*", desc = "Update all plugins or specific ones" })
+
 -- go to last loc when opening a buffer
 vim.api.nvim_create_autocmd("BufReadPost", {
 	callback = function()
@@ -15,11 +37,6 @@ vim.api.nvim_create_autocmd("FileType", {
 		vim.opt_local.wrap = true
 		vim.opt_local.spell = true
 	end,
-})
-
-vim.api.nvim_create_autocmd("BufWinEnter", {
-	pattern = "*.typ",
-	command = "set filetype=typst",
 })
 
 local lang_settings = {
@@ -49,8 +66,9 @@ vim.api.nvim_create_autocmd("FileType", {
 	end,
 })
 
-vim.api.nvim_create_autocmd({ "BufWritePost" }, {
-	callback = function()
-		require("lint").try_lint()
+vim.api.nvim_create_autocmd("BufWritePre", {
+	pattern = "*",
+	callback = function(args)
+		require("conform").format({ bufnr = args.buf })
 	end,
 })
