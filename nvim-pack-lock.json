@@ -1,11 +1,11 @@
 {
   "plugins": {
     "blink.cmp": {
-      "rev": "d2c4d170ad51e5116da7b19f2426f3b6e318161d",
+      "rev": "91774548bc358c02fcc327d33c9ac0d9830c8c47",
       "src": "https://github.com/saghen/blink.cmp"
     },
     "blink.indent": {
-      "rev": "15b3b25c2e76025733cc96df0144e9a9ef4d495c",
+      "rev": "5cb5ea0f942f17d6182fdad064a17d67f71b9375",
       "src": "https://github.com/saghen/blink.indent"
     },
     "blink.lib": {
@@ -13,7 +13,7 @@
       "src": "https://github.com/saghen/blink.lib"
     },
     "blink.pairs": {
-      "rev": "436857a5c2558c8f66a61ce4745d1342789a4881",
+      "rev": "667dc9dd5a3735883b0204212b9602c626ede3fe",
       "src": "https://github.com/saghen/blink.pairs"
     },
     "conform.nvim": {
@@ -29,7 +29,7 @@
       "src": "https://github.com/nvim-lualine/lualine.nvim"
     },
     "mason.nvim": {
-      "rev": "bb639d4bf385a4d89f478b83af4d770be05ab7eb",
+      "rev": "2a6940af80375532e5e9e7c1f2fc6319a1b7a69d",
       "src": "https://github.com/mason-org/mason.nvim"
     },
     "mini.completion": {
@@ -41,7 +41,7 @@
       "src": "https://github.com/nvim-mini/mini.pairs"
     },
     "nvim-lspconfig": {
-      "rev": "6f76a3eeadc2ee235d74cd7d5319e95a261084af",
+      "rev": "a683e0ddf0cf64c6cd689e18ffb480ade3c162b7",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
     "nvim-treesitter": {
@@ -53,7 +53,7 @@
       "src": "https://github.com/nvim-tree/nvim-web-devicons"
     },
     "vim-moonfly-colors": {
-      "rev": "1c0a9994bb6bb5b43859c67924aabd061c4b7905",
+      "rev": "261664f92ed51cf0c077555b2d4b2530307eac17",
       "src": "https://github.com/bluz71/vim-moonfly-colors"
     },
     "vscode.nvim": {
